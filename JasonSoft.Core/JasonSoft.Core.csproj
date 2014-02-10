@@ -1,0 +1,1855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ED0296D-6547-4323-8E76-1ED690C05815}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JasonSoft</RootNamespace>
+    <AssemblyName>JasonSoft.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NET40-Debug|AnyCPU' ">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\NET40-Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_20,NET_35,NET_2_0, AESCRYPTO,WMINET10</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NET40-Release|AnyCPU' ">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\NET40-Release\</OutputPath>
+    <DefineConstants>NET_20,NET_35,NET_2_0, AESCRYPTO,WMINET10</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DeepSeaObfuscate>false</DeepSeaObfuscate>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NET35-Debug|AnyCPU' ">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\NET35-Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_20,NET_35,NET_2_0, AESCRYPTO,WMINET10</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NET35-Release|AnyCPU' ">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\NET35-Release\</OutputPath>
+    <DefineConstants>NET_20,NET_35,NET_2_0, AESCRYPTO,WMINET10</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DeepSeaObfuscate>false</DeepSeaObfuscate>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Castle\Core\Attributes\CastleComponent.cs" />
+    <Compile Include="Components\Castle\Core\Attributes\ComponentActivatorAttribute.cs" />
+    <Compile Include="Components\Castle\Core\Attributes\ComponentProxyBehaviorAttribute.cs" />
+    <Compile Include="Components\Castle\Core\Attributes\DoNotWireAttribute.cs" />
+    <Compile Include="Components\Castle\Core\Attributes\InterceptorAttribute.cs" />
+    <Compile Include="Components\Castle\Core\Attributes\LifestyleAttributes.cs" />
+    <Compile Include="Components\Castle\Core\Interceptor\IChangeProxyTarget.cs" />
+    <Compile Include="Components\Castle\Core\Interceptor\IInterceptor.cs" />
+    <Compile Include="Components\Castle\Core\Interceptor\IInvocation.cs" />
+    <Compile Include="Components\Castle\Core\Interceptor\IOnBehalfAware.cs" />
+    <Compile Include="Components\Castle\Core\Interceptor\IProxyTargetAccessor.cs" />
+    <Compile Include="Components\Castle\Core\Interceptor\StandardInterceptor.cs" />
+    <Compile Include="Components\Castle\Core\Internal\GraphNode.cs" />
+    <Compile Include="Components\Castle\Core\Internal\GraphSets.cs" />
+    <Compile Include="Components\Castle\Core\Internal\IVertex.cs" />
+    <Compile Include="Components\Castle\Core\Internal\LinkedList.cs" />
+    <Compile Include="Components\Castle\Core\Internal\TopologicalSortAlgo.cs" />
+    <Compile Include="Components\Castle\Core\IServiceEnabledComponent.cs" />
+    <Compile Include="Components\Castle\Core\IServiceProviderEx.cs" />
+    <Compile Include="Components\Castle\Core\IServiceProviderExAccessor.cs" />
+    <Compile Include="Components\Castle\Core\Lifecycle\IInitializable.cs" />
+    <Compile Include="Components\Castle\Core\Lifecycle\IRecyclable.cs" />
+    <Compile Include="Components\Castle\Core\Lifecycle\IStartable.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\AbstractExtendedLoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\AbstractLoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\ConsoleFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\DiagnosticsLoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\NullLogFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\StreamLoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Factories\WebLoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\IContextProperties.cs" />
+    <Compile Include="Components\Castle\Core\Logging\IContextStack.cs" />
+    <Compile Include="Components\Castle\Core\Logging\IContextStacks.cs" />
+    <Compile Include="Components\Castle\Core\Logging\IExtendedLogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\IExtendedLoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\ILogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\ILoggerFactory.cs" />
+    <Compile Include="Components\Castle\Core\Logging\LoggerException.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Loggers\ConsoleLogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Loggers\DiagnosticsLogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Loggers\LevelFilteredLogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Loggers\NullLogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Loggers\StreamLogger.cs" />
+    <Compile Include="Components\Castle\Core\Logging\Loggers\WebLogger.cs" />
+    <Compile Include="Components\Castle\Core\Model\ComponentModel.cs" />
+    <Compile Include="Components\Castle\Core\Model\Configuration\AbstractConfiguration.cs" />
+    <Compile Include="Components\Castle\Core\Model\Configuration\ConfigurationCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\Configuration\IConfiguration.cs" />
+    <Compile Include="Components\Castle\Core\Model\Configuration\MutableConfiguration.cs" />
+    <Compile Include="Components\Castle\Core\Model\Configuration\Xml\XmlConfigurationDeserializer.cs" />
+    <Compile Include="Components\Castle\Core\Model\ConstructorCandidate.cs" />
+    <Compile Include="Components\Castle\Core\Model\ConstructorCandidateCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\DependencyModel.cs" />
+    <Compile Include="Components\Castle\Core\Model\DependencyModelCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\InterceptorReference.cs" />
+    <Compile Include="Components\Castle\Core\Model\InterceptorReferenceCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\LifecycleStepCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\MethodMetaModel.cs" />
+    <Compile Include="Components\Castle\Core\Model\MethodMetaModelCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\ParameterModel.cs" />
+    <Compile Include="Components\Castle\Core\Model\ParameterModelCollection.cs" />
+    <Compile Include="Components\Castle\Core\Model\PropertySet.cs" />
+    <Compile Include="Components\Castle\Core\Model\PropertySetCollection.cs" />
+    <Compile Include="Components\Castle\Core\Pair.cs" />
+    <Compile Include="Components\Castle\Core\ReflectionBasedDictionaryAdapter.cs" />
+    <Compile Include="Components\Castle\Core\Resource\AbstractResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\AbstractStreamResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\AssemblyBundleResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\AssemblyResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\AssemblyResourceFactory.cs" />
+    <Compile Include="Components\Castle\Core\Resource\ConfigResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\ConfigResourceFactory.cs" />
+    <Compile Include="Components\Castle\Core\Resource\CustomUri.cs" />
+    <Compile Include="Components\Castle\Core\Resource\FileResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\FileResourceFactory.cs" />
+    <Compile Include="Components\Castle\Core\Resource\IResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\IResourceFactory.cs" />
+    <Compile Include="Components\Castle\Core\Resource\ResourceException.cs" />
+    <Compile Include="Components\Castle\Core\Resource\StaticContentResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\UncResource.cs" />
+    <Compile Include="Components\Castle\Core\Resource\UncResourceFactory.cs" />
+    <Compile Include="Components\Castle\Core\StringObjectDictionaryAdapter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\AbstractComponentActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\ComponentActivatorException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\DecomissioningResponsibility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\DefaultComponentActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\ExternalInstanceActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\IComponentActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ComponentActivator\WebUserControlComponentActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Context\CreationContext.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Context\DependencyTrackingScope.cs" />
+    <Compile Include="Components\Castle\MicroKernel\DefaultKernel.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Exceptions\CircularDependencyException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Exceptions\ComponentNotFoundException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Exceptions\ComponentRegistrationException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Exceptions\KernelException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\AbstractFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\EventWiring\EventWiringException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\EventWiring\EventWiringFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\FacilityException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\FactorySupport\AccessorActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\FactorySupport\FactoryActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\FactorySupport\FactorySupportFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\IFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\CustomActivators\RemoteActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\CustomActivators\RemoteActivatorThroughConnector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\CustomActivators\RemoteActivatorThroughRegistry.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\CustomActivators\RemoteClientActivatedActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\CustomActivators\RemoteMarshallerActivator.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\RemotingFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\RemotingInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Remoting\RemotingRegistry.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Startable\StartableFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Startable\StartConcern.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\Startable\StopConcern.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\TypedFactory\Empty.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\TypedFactory\FactoryEntry.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\TypedFactory\FactoryInterceptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Facilities\TypedFactory\TypedFactoryFacility.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\AbstractHandler.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\DefaultGenericHandler.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\DefaultHandler.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\DefaultHandlerFactory.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\HandlerException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\IExposeDependencyInfo.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\IHandler.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\IHandlerFactory.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Handlers\ParentHandlerWithChildResolver.cs" />
+    <Compile Include="Components\Castle\MicroKernel\IKernel.cs" />
+    <Compile Include="Components\Castle\MicroKernel\IKernelEvents.cs" />
+    <Compile Include="Components\Castle\MicroKernel\KernelEventSupport.cs" />
+    <Compile Include="Components\Castle\MicroKernel\LifecycleConcerns\DisposalConcern.cs" />
+    <Compile Include="Components\Castle\MicroKernel\LifecycleConcerns\ILifecycleConcern.cs" />
+    <Compile Include="Components\Castle\MicroKernel\LifecycleConcerns\InitializationConcern.cs" />
+    <Compile Include="Components\Castle\MicroKernel\LifecycleConcerns\SupportInitializeConcern.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\AbstractLifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\ILifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\PerThreadLifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\PerWebRequestLifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\PoolableLifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\Pool\DefaultPool.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\Pool\DefaultPoolFactory.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\Pool\IPool.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\Pool\IPoolFactory.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\Pool\PoolException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\SingletonLifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Lifestyle\TransientLifestyleManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\DefaultComponentModelBuilder.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\IComponentModelBuilder.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\IContributeComponentModelConstruction.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\ComponentActivatorInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\ComponentProxyInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\ConfigurationModelInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\ConfigurationParametersInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\ConstructorDependenciesModelInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\ExtendedPropertiesConstants.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\GenericInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\InterceptorInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\LifecycleModelInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\LifestyleModelInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\MethodMetaInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\ModelBuilder\Inspectors\PropertiesDependenciesModelInspector.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Proxy\IProxyFactory.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Proxy\IProxyHook.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Proxy\NotSupportedProxyFactory.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Proxy\ProxyConstants.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Proxy\ProxyOptions.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Proxy\ProxyUtil.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\AbstractPropertyDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\AttributeDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\ComponentDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\ComponentInstanceDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\ComponentRegistration.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\CustomDependencyDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\ExtendedPropertiesDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Interceptor\InterceptorDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Interceptor\InterceptorGroup.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\Custom.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\LifestyleDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\LifestyleGroup.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\PerThread.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\PerWebRequest.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\Pooled.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\Singleton.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Lifestyle\Transient.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Property.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Proxy\ProxyGroup.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\Proxy\ProxyInterfaces.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\RegistrationGroup.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\ServiceOverride.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Registration\ServiceOverrideDescriptor.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Releasers\AllComponentsReleasePolicy.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Releasers\IReleasePolicy.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Releasers\LifecycledComponentsReleasePolicy.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Releasers\NoTrackingReleasePolicy.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Resolvers\DefaultDependencyResolver.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Resolvers\DependencyResolverException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Resolvers\IDependencyResolver.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Resolvers\ISubDependencyResolver.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\AbstractSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Configuration\DefaultConfigurationStore.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Configuration\IConfigurationStore.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\AbstractTypeConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\ConverterException.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\ArrayConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\AttributeAwareConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\ComponentConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\ComponentModelConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\DefaultComplexConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\DictionaryConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\EnumConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\Generics\GenericDictionaryConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\Generics\GenericListConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\Generics\IGenericCollectionConverterHelper.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\ListConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\PrimitiveConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\TimeSpanConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\Converters\TypeNameConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\ConvertibleAttribute.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\DefaultConversionManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\IConversionManager.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\IKernelDependentConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\ITypeConverter.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Conversion\ITypeConverterContext.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\ISubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Naming\BinaryTreeComponentName.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Naming\ComponentName.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Naming\DefaultNamingSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Naming\INamingSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Naming\KeySearchNamingSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Naming\NamingPartsSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Resource\DefaultResourceSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\Resource\IResourceSubSystem.cs" />
+    <Compile Include="Components\Castle\MicroKernel\SubSystems\SubSystemConstants.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Util\ReferenceComparer.cs" />
+    <Compile Include="Components\Castle\MicroKernel\Util\ReferenceExpressionUtil.cs" />
+    <Compile Include="Components\Container\ContainerFacade.cs" />
+    <Compile Include="Components\Container\IConfigSource.cs" />
+    <Compile Include="Components\Container\IContainerFacade.cs" />
+    <Compile Include="Components\Container\InstanceScope.cs" />
+    <Compile Include="Components\Container\InstanceScopeAdapter.cs" />
+    <Compile Include="Components\Container\IObjectContainer.cs" />
+    <Compile Include="Components\Container\ObjectContainer.cs" />
+    <Compile Include="Components\Container\ObjectRegisteredForm.cs" />
+    <Compile Include="Components\Container\Parameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\AssemblyQualifiedTypeNameConverter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\BlockSectionNames.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ByteArrayTypeConverter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\CallHandlerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\CompositeConfigurationSourceHandler.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationChangedEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationElementTypeAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationFileChangedEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationFileSourceWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSectionCloner.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceChangedEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceErrorsException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceHandler.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceSection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ConfigurationSourceWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ChangeTrackingContainerConfigurator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ConfigSectionLocator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ConfigurationBasedTypeRegistrationsProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ConfigurationChangeEventSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ConfigurationChangeEventSourceImpl.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ConstantParameterValue.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\Container.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ContainerBasedInstanceFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ContainerReconfiguringEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ContainerResolvedEnumerableParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ContainerResolvedParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\IContainerConfigurator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\IContainerReconfiguringEventSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\InjectedProperty.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ITypeRegistrationsProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\NullContainerReconfiguringEventSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ParameterValue.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\ParameterValueVisitor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\RegistrationExpressionBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\TypeLoadingLocator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\TypeRegistration.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\TypeRegistrationsProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ContainerModel\Unity\UnityContainerConfigurator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\CustomCallHandlerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\CustomConfigurationElementCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\CustomProviderDataHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\DesignResources.Designer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\AddApplicationBlockCommandAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\AddSateliteProviderCommandAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\AppSettingsDesignTime.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\BaseTypeAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\CloneableConfigurationElementTypeAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\CollectionEditorTemplateAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\CommandAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\CommonDesignTime.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\ConfigurationSourcesDesignTime.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\DesignConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\DesigntimeDefaultAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\DesignTimeReadOnly.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\DesignTimeTypeAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\EditorWithReadOnlyTextAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\EnvironmentalOverridesAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\FilteredFileNameEditorAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\HandlesSectionAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\IDesignConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\MergeableConfigurationCollectionTypeAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\NamePropertyAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\OmitCustomAttributesPropertyAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\PromoteCommandsAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\ReferenceAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\RegisterAsMetadataTypeAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\ResourceCategoryAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\ResourceDescriptionAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\ResourceDisplayNameAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\TypePickingCommandAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\TypeSelectorIncludes.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\Validation\ValidationAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\ViewModelAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Design\WizardCommandAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\DictionaryConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\EnterpriseLibraryContainer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\EnumConverterWithExclusiveSuggestedValues.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\FileBasedConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\FileConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\FileConfigurationSourceElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Fluent\IConfigureTypeRegistrations.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Fluent\TypeRegistrationProviderConfigurationSourceBuilderExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\GenericEnumeratorWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\HierarchicalConfigurationSourceHandler.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ICloneableConfigurationElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IConfigurationSourceTest.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\ICustomProviderData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IHelperAssistedCustomConfigurationData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IMergeableConfigurationElementCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IObjectWithName.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IObjectWithNameAndType.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\IProtectedConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmCategory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmCheckboxPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmComboBoxPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmContent.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmContentBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmDropDownListItem.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmDropDownListPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmEditTextPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdministrativeTemplateGenerator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmNumericPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Adm\AdmTextPart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationChangeNotificationCoordinator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationChangeWatcherCoordinator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationElementManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationElementManageabilityProviderAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationElementManageabilityProviderBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationInstanceConfigurationAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationSectionManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationSectionManageabilityProviderAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ConfigurationSectionManageabilityProviderBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Configuration\ConfigurationElementManageabilityProviderData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Configuration\ConfigurationSectionManageabilityProviderData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Configuration\ManageabilityProviderBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Configuration\ManageableConfigurationSourceElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\CustomProviderDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\GroupPolicyNotificationRegistration.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\GroupPolicyNotificationRegistrationBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\GroupPolicyWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\IConfigurationAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\IGroupPolicyWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\IManageabilityHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ImplementationKey.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ImplementationKeyComparer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Installer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\InstrumentationConfigurationSectionManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\IRegistryAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\IRegistryKey.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\KeyValuePairEncoder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\KeyValuePairParser.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ManageabilityExtensionsLogger.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ManageabilityHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ManageableConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ManageableConfigurationSourceImplementation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ManageableConfigurationSourceSingletonHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\NativeMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\ParseHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Properties\AssemblyInfo.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Properties\Resources.Designer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\RegistryAccessException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\RegistryAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\RegistryKeyBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\RegistryKeyWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\MergeableConfigurationCollectionFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\NamedConfigurationElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\NamedElementCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\NameTypeConfigurationElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\NameTypeConfigurationElementCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\NullConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\PolymorphicConfigurationElementCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\RedirectedSectionElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\SectionChangedEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\SerializableConfigurationSection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Storage\ConfigurationChangeFileWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Storage\ConfigurationChangeWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Storage\ConfigurationChangeWatcherPauser.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Storage\IConfigurationChangeWatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\SystemConfigurationSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\SystemConfigurationSourceElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\TypeRegistrationProviderElement.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\TypeRegistrationProviderElementCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\TypeRegistrationProvidersConfigurationSection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Unity\EnterpriseLibraryBlockExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Unity\EnterpriseLibraryCoreExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Unity\ReaderWriterLockExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Unity\TransientPolicyBuildUpExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Configuration\Unity\UnityContainerExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\IFluentInterface.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\AbstractInstallerBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\AppDomainNameFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\CommonWmiInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\CommonWmiInstaller.Designer.cs">
+      <DependentUpon>CommonWmiInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\Configuration\ConfigurationSourceBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\Configuration\InstrumentationConfigurationSection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\EnterpriseLibraryPerformanceCounter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\EnterpriseLibraryPerformanceCounterFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\EventBinder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\EventLogDefinitionAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\EventLogEntryFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\EventLogInstallerBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\HasInstallableResourcesAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\IEventLogEntryFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\InstrumentationBaseAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\InstrumentationConsumerAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\InstrumentationListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\InstrumentationListenerAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\InstrumentationProviderAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\IPerformanceCounterNameFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\NoPrefixNameFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\PerformanceCounterAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\PerformanceCounterInstallerBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\PerformanceCounterInstanceName.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\PerformanceCountersDefinitionAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Instrumentation\ReflectionInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Common\MethodInvocationFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\ReplacementFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\ResourceStringLoader.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\ConstantStringResolver.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\DelegateStringResolver.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\EnumerableExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\IStringResolver.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\ResourceStringResolver.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\ServiceLocatorExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\TypeExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Common\Utility\WrappedAsyncOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\CachingMechanism.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\CommandAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\DataAccessDesignTime.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\DatabaseData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\DatabaseSettings.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\DatabaseSyntheticConfigSettings.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\DbProviderMapping.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\DesignResources.Designer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\AnotherDatabaseConfigurationExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\DatabaseConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\DatabaseProviderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\DataConfigurationSourceBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDatabaseConfiguration.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDatabaseConfigurationProperties.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDatabaseConfigurationProviderEntry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDatabaseConfigurationProviders.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDatabaseDefaultConnectionString.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDatabaseProviderExtensionContext.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\IDataConfiguration.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\OdbcConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\OleDbConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\SqlCeDatabaseConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Fluent\SqlDatabaseConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\GenericDatabaseData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Manageability\ConnectionStringsManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Manageability\DatabaseSettingsManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Manageability\Properties\Resources.Designer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Configuration\Unity\DataAccessBlockExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\ConnectionString.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DaabAsyncResult.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DataAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Database.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DatabaseConnectionWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DatabaseExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DatabaseFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DatabaseProviderFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\DataReaderWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\GenericDatabase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Instrumentation\DataInstrumentationInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Data\Instrumentation\DataInstrumentationInstaller.Designer.cs">
+      <DependentUpon>DataInstrumentationInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Data\Instrumentation\DefaultDataEventLogger.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Instrumentation\IDataInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Instrumentation\NewDataInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Instrumentation\NullDataInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\IParameterMapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\IResultSetMapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\IRowMapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\MapBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\ParameterCache.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\RefCountingDataReader.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\ReflectionRowMapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\SprocAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\SqlStringAccessor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Sql\Configuration\SqlDatabaseData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Sql\RefCountingXmlReader.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\Sql\SqlDatabase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\TransactionScopeConnections.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Data\UpdateBehavior.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Attributes.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\CategoryFilterMode.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\BasicCustomTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\BasicCustomTraceListenerDataHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\BinaryLogFormatterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\CategoryFilterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\CategoryFilterEntry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\CustomFormatterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\CustomLogFilterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\CustomTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\CustomTraceListenerDataHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\DesignResources.Designer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\EmailMessage.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\EmailTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\FlatFileTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\BinaryFormatterBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\BinaryFormatterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\CategoryFilterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\CustomFilterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\CustomFormatterBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\CustomFormatterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\FormatterBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\IFormatterBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationCategoryContd.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationCategoryOptions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationCategoryStart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationContd.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationCustomCategoryOptions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationCustomCategoryStart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationFilterLogEnabled.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationFilterOnCategory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationFilterOnPriority.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationOptions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendTo.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToCustomTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToEmailTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToEventLogTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToExtention.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToFlatFileTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToMsmqTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToRollingFileTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToSystemDiagnosticsTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToWmiTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSendToXmlTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationSpecialSources.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ILoggingConfigurationStart.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\ITextFormatterBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\LogEnabledFilterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\LoggingConfigurationExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\LoggingConfigurationSourceBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\PriorityFilterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToCustomTraceListenerExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToEmailTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToEventLogTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToFlatFileTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToMsmqTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToRollingFileTraceListenerExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToSystemDiagnosticsTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToWmiTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SendToXmlTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\SentToTraceListenerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\TextFormatterBuilder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Fluent\TextFormatterBuilderExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\FormattedEventLogTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\FormatterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\LogCallHandlerCategoryEntry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\LogCallHandlerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\LogEnabledFilterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\LogFilterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\LoggingDesignTime.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\LoggingSettings.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Filters\CategoryFilterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Filters\CustomLogFilterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Filters\LogEnabledFilterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Filters\PriorityFilterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Formatters\BinaryLogFormatterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Formatters\CustomFormatterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Formatters\TextFormatterDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\LoggingSettingsManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Properties\AssemblyInfo.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Properties\Resources.Designer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\BasicCustomTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\CustomTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\EmailTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\FlatFileTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\FormattedEventLogTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\MsmqTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\RollingFlatFileTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\SystemDiagnosticsTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\TraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\WmiTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\TraceListeners\XmlTraceListenerDataManageabilityProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\MsmqTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\PriorityFilterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\RollingTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\SpecialTraceSourcesData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\SystemDiagnosticsTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\TextFormatterData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\TraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\TraceListenerDataCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\TraceListenerReferenceData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\TraceSourceData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\Unity\LoggingBlockExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\WmiTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Configuration\XmlTraceListenerData.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ContextItems.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExceptionFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\ComPlusInformationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\DebugInformationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\Helpers\ContextUtils.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\Helpers\DebugUtils.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\Helpers\IContextUtils.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\Helpers\IDebugUtils.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\IExtraInformationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\ManagedSecurityContextInformationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ExtraInformation\UnmanagedSecurityContextInformationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\CategoryFilter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\ILogFilter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\ILogFilterErrorHandler.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\LogEnabledFilter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\LogFilter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\LogFilterHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Filters\PriorityFilter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\BinaryLogFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\GenericTextFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\ILogFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\LogFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\TextFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\TokenFunction.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Formatters\XmlLogFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ILoggingUpdateCoordinator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\DefaultLoggingEventLogger.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\ILoggingInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\ITracerInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\LoggingInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\NullLoggingInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\NullTracerInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\TracerInstrumentationProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Instrumentation\TracerPerformanceCounter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LogEntry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Logger.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LoggingException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LoggingUpdateCoordinator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LogSource.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LogWriter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LogWriterFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LogWriterImpl.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\LogWriterStructureHolder.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\NativeMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\PolicyInjection\CategoryFormatter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\PolicyInjection\LogCallHandler.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\PolicyInjection\LogCallHandlerAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\PolicyInjection\TraceLogEntry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Logging\ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListenerFilter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\AttributeSettingTraceListenerWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\CustomTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\EmailAuthenticationMode.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\EmailTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\EntLibLoggingProxyTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\EnvironmentHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\FlatFileTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\FormattedEventLogTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\FormattedTextWriterTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\FormattedTraceListenerBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\FormattedTraceListenerWrapperBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\IMsmqSendInterface.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\IMsmqSendInterfaceFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\MsmqSendInterface.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\MsmqSendInterfaceFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\MsmqTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\ReconfigurableTraceListenerWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\RollFileExistsBehavior.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\RollingFlatFilePurger.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\RollingFlatFileTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\RollInterval.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\TraceListenerWrapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\WMITraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceListeners\XmlTraceListener.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\TraceManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\Tracer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Logging\XmlLogEntry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\ServiceLocator\ActivationException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\ServiceLocator\ActivationException.Desktop.cs" />
+    <Compile Include="Components\EnterpriseLibrary\ServiceLocator\IServiceLocator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\ServiceLocator\ServiceLocator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\ServiceLocator\ServiceLocatorImplBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\ServiceLocator\ServiceLocatorProvider.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\AdditionalInterface.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\DefaultInterceptionBehavior.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\DefaultInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\Interception.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\InterceptionBehavior.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\InterceptionBehaviorBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\InterceptionMember.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\Interceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\AdditionalInterfacesPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\FixedInstanceInterceptionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\FixedTypeInterceptionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\IAdditionalInterfacesPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\IInstanceInterceptionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\IInterceptionBehaviorsPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\InstanceInterceptionStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\InterceptionBehaviorsPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\ITypeInterceptionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\ResolvedInstanceInterceptionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\ResolvedTypeInterceptionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\ObjectBuilder\TypeInterceptionStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\ContainerIntegration\PolicyDefinition.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\GlobalSuppressions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Intercept.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\InterceptionBehaviors\CurrentInterceptionRequest.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\InterceptionBehaviors\IInterceptionBehavior.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\InterceptionBehaviors\InterceptionBehaviorPipeline.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\IInterceptingProxy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\IInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\IInstanceInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceImplementation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceInterceptorClassGenerator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\InterfaceInterception\InterfaceMethodOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\TransparentProxyInterception\InterceptingRealProxy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\TransparentProxyInterception\TransparentProxyInputParameterCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\TransparentProxyInterception\TransparentProxyInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\TransparentProxyInterception\TransparentProxyMethodInvocation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\TransparentProxyInterception\TransparentProxyMethodReturn.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\InstanceInterceptors\TransparentProxyInterception\TransparentProxyOutputParameterCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\MethodImplementationInfo.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\ITypeInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\ConstructorWithResolverKeysSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\CompilerGeneratedAttributeMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\GeneratedTypeKey.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\IInterceptingProxyMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\IListMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\IMethodInvocationMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\IMethodReturnMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\InterceptingClassGenerator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\InterceptingProxyImplementor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\InterceptionBehaviorPipelineMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\InvokeInterceptionBehaviorDelegateMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\MethodBaseMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\MethodOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\MethodOverrideParameterMapper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\MethodSorter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\ObjectMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\InterceptingClassGeneration\VirtualMethodInvocationMethods.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\VirtualMethodInterceptor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\VirtualMethodInvocation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Interceptors\TypeInterceptors\VirtualMethodInterception\VirtualMethodReturn.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\HandlerPipelineKey.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\ApplyNoPoliciesMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\AssemblyMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\AttributeDrivenPolicyMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\CustomAttributeMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\IMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\MatchingInfo.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\MatchingRuleSet.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\MemberNameMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\MethodSignatureMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\NamespaceMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\ParameterTypeMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\PropertyMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\ReturnTypeMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\TagAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\TagAttributeMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\MatchingRules\TypeMatchingRule.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\HandlerPipeline.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\ICallHandler.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\IMethodInvocation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\IMethodReturn.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\IParameterCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\ParameterCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Pipeline\PipelineManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Policies\ApplyNoPoliciesAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Policies\AttributeDrivenPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Policies\HandlerAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Policies\InjectionPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Policies\PolicySet.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\Policies\RuleDrivenPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\PolicyInjection\PolicyInjectionBehavior.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Utilities\Glob.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity.Interception\Utilities\ReflectionHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Attributes\DependencyAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Attributes\DependencyResolutionAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Attributes\InjectionConstructorAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Attributes\InjectionMethodAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Attributes\OptionalDependencyAttribute.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\CompositeResolverOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ContainerRegistration.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\DependencyOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\DependencyOverrides.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\ChildContainerCreatedEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\ExtensionContext.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\IUnityContainerExtensionConfigurator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\NamedEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\RegisterEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\RegisterInstanceEventArgs.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Extension\UnityContainerExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\GlobalSuppressions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\GenericParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\GenericParameterBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\GenericResolvedArrayParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectedMembers.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionConstructor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionMember.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionMethod.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionParameterValue.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\InjectionProperty.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\OptionalGenericParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\OptionalParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\ResolvedArrayParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\ResolvedParameter.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Injection\TypedInjectionValue.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\IUnityContainer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\ContainerControlledLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\ExternallyControlledLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\HierarchicalLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\LifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\LifetimeManagerFactory.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\PerResolveLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\PerThreadLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\SynchronizedLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Lifetime\TransientLifetimeManager.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\NamedTypesRegistry.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\ArrayResolutionStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\DefaultUnityConstructorSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\DefaultUnityMethodSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\DefaultUnityPropertySelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\HierarchicalLifetimeStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\LiteralValueDependencyResolverPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\NamedTypeDependencyResolverPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\OptionalDependencyResolverPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\ResolvedArrayWithElementsResolverPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\SpecifiedConstructorSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\SpecifiedMemberSelectorHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\SpecifiedMethodsSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\SpecifiedPropertiesSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilderCustomization\UnityBuildStage.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\BuilderContext.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Exceptions\DependencyMissingException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Exceptions\DependencyMissingException.Desktop.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Exceptions\IllegalInjectionMethodException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Exceptions\IllegalInjectionMethodException.Desktop.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\IBuilderContext.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\IRecoveryStack.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\IRequiresRecovery.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Lifetime\ILifetimeContainer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Lifetime\LifetimeContainer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Policies\IBuilderPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Policies\IPolicyList.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Policies\PolicyList.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Policies\PolicyListExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\RecoveryStack.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuilderAware\BuilderAwareStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuilderAware\IBuilderAware.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuilderStage.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuilderStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildKeyMapping\BuildKeyMappingPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildKeyMapping\BuildKeyMappingStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildKeyMapping\GenericTypeBuildKeyMappingPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildKeyMapping\IBuildKeyMappingPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\BuildOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\BuildPlanStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Creation\ConstructorSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Creation\ConstructorSelectorPolicyBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Creation\IConstructorSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Creation\SelectedConstructor.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Creation\SelectedMemberWithParameters.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Creation\ConstructorArgumentResolveOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Creation\DynamicMethodConstructorStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Creation\InvokingConstructorOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\DefaultDynamicBuilderMethodCreatorPolicy.Desktop.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\DynamicBuildPlanGenerationContext.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\DynamicMethodBuildPlan.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\DynamicMethodBuildPlanCreatorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\IDynamicBuilderMethodCreatorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Method\DynamicMethodCallStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Method\InvokingMethodOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Method\MethodArgumentResolveOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Property\DynamicMethodPropertySetterStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Property\PropertyOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Property\ResolvingPropertyValueOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\DynamicMethod\Property\SettingPropertyOperation.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Factory\DeferredResolveBuildPlanPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Factory\FactoryDelegateBuildPlanPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\IBuildPlanCreatorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\IBuildPlanPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Method\IMethodSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Method\MethodSelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Method\MethodSelectorPolicyBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Method\SelectedMethod.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\OverriddenBuildPlanMarkerPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Property\IPropertySelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Property\PropertySelectorBase.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Property\PropertySelectorPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Property\SelectedProperty.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Resolution\DependencyResolverTrackerPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Resolution\FixedTypeResolverPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Resolution\IDependencyResolverPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\BuildPlan\Resolution\IDependencyResolverTrackerPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\IBuilderStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\IStagedStrategyChain.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\IStrategyChain.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\Lifetime\ILifetimeFactoryPolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\Lifetime\ILifetimePolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\Lifetime\LifetimeStrategy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\Lifetime\SingletonLifetimePolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\Lifetime\TransientLifetimePolicy.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\StagedStrategyChain.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Strategies\StrategyChain.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Utility\EnumerableExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Utility\NamedTypeBuildKey.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ObjectBuilder\Utility\Sequence.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\OverrideCollection.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ParameterOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ParameterOverrides.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\PropertyOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\PropertyOverrides.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ResolutionFailedException.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ResolutionFailedException.Desktop.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\ResolverOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\StaticFactory\IStaticFactoryConfiguration.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\StaticFactory\StaticFactoryExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\TypeBasedOverride.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\UnityContainer.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\UnityContainerExtensions.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\UnityDefaultBehaviorExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\UnityDefaultStrategiesExtension.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\UnityDefaultStrategiesExtension.Desktop.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\UnityServiceLocator.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\Guard.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\MethodReflectionHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\Pair.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\ParameterMatcher.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\ParameterReflectionHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\ReflectionHelper.cs" />
+    <Compile Include="Components\EnterpriseLibrary\Unity\Utility\StaticReflection.cs" />
+    <Compile Include="Components\Log4net\Appender\AdoNetAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\AnsiColorTerminalAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\AppenderCollection.cs" />
+    <Compile Include="Components\Log4net\Appender\AppenderSkeleton.cs" />
+    <Compile Include="Components\Log4net\Appender\AspNetTraceAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\BufferingAppenderSkeleton.cs" />
+    <Compile Include="Components\Log4net\Appender\BufferingForwardingAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\ColoredConsoleAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\ConsoleAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\DebugAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\EventLogAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\FileAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\ForwardingAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\IAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\IBulkAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\LocalSyslogAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\MemoryAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\NetSendAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\OutputDebugStringAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\RemoteSyslogAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\RemotingAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\RollingFileAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\SmtpAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\SmtpPickupDirAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\TelnetAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\TextWriterAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\TraceAppender.cs" />
+    <Compile Include="Components\Log4net\Appender\UdpAppender.cs" />
+    <Compile Include="Components\Log4net\Config\AliasDomainAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\AliasRepositoryAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\BasicConfigurator.cs" />
+    <Compile Include="Components\Log4net\Config\ConfiguratorAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\DomainAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\DOMConfigurator.cs" />
+    <Compile Include="Components\Log4net\Config\DOMConfiguratorAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\Log4NetConfigurationSectionHandler.cs" />
+    <Compile Include="Components\Log4net\Config\PluginAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\RepositoryAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\SecurityContextProviderAttribute.cs" />
+    <Compile Include="Components\Log4net\Config\XmlConfigurator.cs" />
+    <Compile Include="Components\Log4net\Config\XmlConfiguratorAttribute.cs" />
+    <Compile Include="Components\Log4net\Core\CompactRepositorySelector.cs" />
+    <Compile Include="Components\Log4net\Core\DefaultRepositorySelector.cs" />
+    <Compile Include="Components\Log4net\Core\ErrorCode.cs" />
+    <Compile Include="Components\Log4net\Core\IAppenderAttachable.cs" />
+    <Compile Include="Components\Log4net\Core\IErrorHandler.cs" />
+    <Compile Include="Components\Log4net\Core\IFixingRequired.cs" />
+    <Compile Include="Components\Log4net\Core\ILogger.cs" />
+    <Compile Include="Components\Log4net\Core\ILoggerWrapper.cs" />
+    <Compile Include="Components\Log4net\Core\IOptionHandler.cs" />
+    <Compile Include="Components\Log4net\Core\IRepositorySelector.cs" />
+    <Compile Include="Components\Log4net\Core\ITriggeringEventEvaluator.cs" />
+    <Compile Include="Components\Log4net\Core\Level.cs" />
+    <Compile Include="Components\Log4net\Core\LevelCollection.cs" />
+    <Compile Include="Components\Log4net\Core\LevelEvaluator.cs" />
+    <Compile Include="Components\Log4net\Core\LevelMap.cs" />
+    <Compile Include="Components\Log4net\Core\LocationInfo.cs" />
+    <Compile Include="Components\Log4net\Core\LogException.cs" />
+    <Compile Include="Components\Log4net\Core\LoggerManager.cs" />
+    <Compile Include="Components\Log4net\Core\LoggerWrapperImpl.cs" />
+    <Compile Include="Components\Log4net\Core\LoggingEvent.cs" />
+    <Compile Include="Components\Log4net\Core\LogImpl.cs" />
+    <Compile Include="Components\Log4net\Core\SecurityContext.cs" />
+    <Compile Include="Components\Log4net\Core\SecurityContextProvider.cs" />
+    <Compile Include="Components\Log4net\Core\WrapperMap.cs" />
+    <Compile Include="Components\Log4net\DateFormatter\AbsoluteTimeDateFormatter.cs" />
+    <Compile Include="Components\Log4net\DateFormatter\DateTimeDateFormatter.cs" />
+    <Compile Include="Components\Log4net\DateFormatter\IDateFormatter.cs" />
+    <Compile Include="Components\Log4net\DateFormatter\Iso8601DateFormatter.cs" />
+    <Compile Include="Components\Log4net\DateFormatter\SimpleDateFormatter.cs" />
+    <Compile Include="Components\Log4net\Filter\DenyAllFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\FilterDecision.cs" />
+    <Compile Include="Components\Log4net\Filter\FilterSkeleton.cs" />
+    <Compile Include="Components\Log4net\Filter\IFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\LevelMatchFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\LevelRangeFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\LoggerMatchFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\MdcFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\NdcFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\PropertyFilter.cs" />
+    <Compile Include="Components\Log4net\Filter\StringMatchFilter.cs" />
+    <Compile Include="Components\Log4net\GlobalContext.cs" />
+    <Compile Include="Components\Log4net\ILog.cs" />
+    <Compile Include="Components\Log4net\Layout\ExceptionLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\ILayout.cs" />
+    <Compile Include="Components\Log4net\Layout\IRawLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\Layout2RawLayoutAdapter.cs" />
+    <Compile Include="Components\Log4net\Layout\LayoutSkeleton.cs" />
+    <Compile Include="Components\Log4net\Layout\PatternLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\AppDomainPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\DatePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\ExceptionPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\FileLocationPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\FullLocationPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\IdentityPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\LevelPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\LineLocationPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\LoggerPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\MessagePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\MethodLocationPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\NamedPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\NdcPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\PatternLayoutConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\PropertyPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\RelativeTimePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\ThreadPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\TypeNamePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\UserNamePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\Pattern\UtcDatePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\RawLayoutConverter.cs" />
+    <Compile Include="Components\Log4net\Layout\RawPropertyLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\RawTimeStampLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\RawUtcTimeStampLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\SimpleLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\XMLLayout.cs" />
+    <Compile Include="Components\Log4net\Layout\XMLLayoutBase.cs" />
+    <Compile Include="Components\Log4net\Layout\XmlLayoutSchemaLog4j.cs" />
+    <Compile Include="Components\Log4net\LogicalThreadContext.cs" />
+    <Compile Include="Components\Log4net\LogManager.cs" />
+    <Compile Include="Components\Log4net\MDC.cs" />
+    <Compile Include="Components\Log4net\NDC.cs" />
+    <Compile Include="Components\Log4net\ObjectRenderer\DefaultRenderer.cs" />
+    <Compile Include="Components\Log4net\ObjectRenderer\IObjectRenderer.cs" />
+    <Compile Include="Components\Log4net\ObjectRenderer\RendererMap.cs" />
+    <Compile Include="Components\Log4net\Plugin\IPlugin.cs" />
+    <Compile Include="Components\Log4net\Plugin\IPluginFactory.cs" />
+    <Compile Include="Components\Log4net\Plugin\PluginCollection.cs" />
+    <Compile Include="Components\Log4net\Plugin\PluginMap.cs" />
+    <Compile Include="Components\Log4net\Plugin\PluginSkeleton.cs" />
+    <Compile Include="Components\Log4net\Plugin\RemoteLoggingServerPlugin.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\DefaultLoggerFactory.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\Hierarchy.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\ILoggerFactory.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\Logger.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\LoggerKey.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\ProvisionNode.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\RootLogger.cs" />
+    <Compile Include="Components\Log4net\Repository\Hierarchy\XmlHierarchyConfigurator.cs" />
+    <Compile Include="Components\Log4net\Repository\IBasicRepositoryConfigurator.cs" />
+    <Compile Include="Components\Log4net\Repository\ILoggerRepository.cs" />
+    <Compile Include="Components\Log4net\Repository\IXmlRepositoryConfigurator.cs" />
+    <Compile Include="Components\Log4net\Repository\LoggerRepositorySkeleton.cs" />
+    <Compile Include="Components\Log4net\ThreadContext.cs" />
+    <Compile Include="Components\Log4net\Util\AppenderAttachedImpl.cs" />
+    <Compile Include="Components\Log4net\Util\CompositeProperties.cs" />
+    <Compile Include="Components\Log4net\Util\ContextPropertiesBase.cs" />
+    <Compile Include="Components\Log4net\Util\CountingQuietTextWriter.cs" />
+    <Compile Include="Components\Log4net\Util\CyclicBuffer.cs" />
+    <Compile Include="Components\Log4net\Util\EmptyCollection.cs" />
+    <Compile Include="Components\Log4net\Util\EmptyDictionary.cs" />
+    <Compile Include="Components\Log4net\Util\FormattingInfo.cs" />
+    <Compile Include="Components\Log4net\Util\GlobalContextProperties.cs" />
+    <Compile Include="Components\Log4net\Util\LevelMapping.cs" />
+    <Compile Include="Components\Log4net\Util\LevelMappingEntry.cs" />
+    <Compile Include="Components\Log4net\Util\LogicalThreadContextProperties.cs" />
+    <Compile Include="Components\Log4net\Util\LogLog.cs" />
+    <Compile Include="Components\Log4net\Util\NativeError.cs" />
+    <Compile Include="Components\Log4net\Util\NullDictionaryEnumerator.cs" />
+    <Compile Include="Components\Log4net\Util\NullEnumerator.cs" />
+    <Compile Include="Components\Log4net\Util\NullSecurityContext.cs" />
+    <Compile Include="Components\Log4net\Util\OnlyOnceErrorHandler.cs" />
+    <Compile Include="Components\Log4net\Util\OptionConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternParser.cs" />
+    <Compile Include="Components\Log4net\Util\PatternString.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\AppDomainPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\DatePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\EnvironmentPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\IdentityPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\LiteralPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\NewLinePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\ProcessIdPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\PropertyPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\RandomStringPatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\UserNamePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PatternStringConverters\UtcDatePatternConverter.cs" />
+    <Compile Include="Components\Log4net\Util\PropertiesDictionary.cs" />
+    <Compile Include="Components\Log4net\Util\ProtectCloseTextWriter.cs" />
+    <Compile Include="Components\Log4net\Util\QuietTextWriter.cs" />
+    <Compile Include="Components\Log4net\Util\ReaderWriterLock.cs" />
+    <Compile Include="Components\Log4net\Util\ReadOnlyPropertiesDictionary.cs" />
+    <Compile Include="Components\Log4net\Util\ReusableStringWriter.cs" />
+    <Compile Include="Components\Log4net\Util\SystemInfo.cs" />
+    <Compile Include="Components\Log4net\Util\SystemStringFormat.cs" />
+    <Compile Include="Components\Log4net\Util\TextWriterAdapter.cs" />
+    <Compile Include="Components\Log4net\Util\ThreadContextProperties.cs" />
+    <Compile Include="Components\Log4net\Util\ThreadContextStack.cs" />
+    <Compile Include="Components\Log4net\Util\ThreadContextStacks.cs" />
+    <Compile Include="Components\Log4net\Util\Transform.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\BooleanConverter.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\ConversionNotSupportedException.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\ConverterRegistry.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\EncodingConverter.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\IConvertFrom.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\IConvertTo.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\IPAddressConverter.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\PatternLayoutConverter.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\PatternStringConverter.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\TypeConverter.cs" />
+    <Compile Include="Components\Log4net\Util\TypeConverters\TypeConverterAttribute.cs" />
+    <Compile Include="Components\Log4net\Util\WindowsSecurityContext.cs" />
+    <Compile Include="Components\Logging\Adapter\Log4Net\CommonLoggingAppender.cs" />
+    <Compile Include="Components\Logging\Adapter\Log4Net\Log4NetLogger.cs" />
+    <Compile Include="Components\Logging\Adapter\Log4Net\Log4NetLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\ConfigurationException.cs" />
+    <Compile Include="Components\Logging\ConfigurationSectionHandler.cs" />
+    <Compile Include="Components\Logging\Configuration\ArgUtils.cs" />
+    <Compile Include="Components\Logging\Configuration\DefaultConfigurationReader.cs" />
+    <Compile Include="Components\Logging\Configuration\LogSetting.cs" />
+    <Compile Include="Components\Logging\Factory\AbstractCachingLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\Factory\AbstractLogger.cs" />
+    <Compile Include="Components\Logging\FormatMessageHandler.cs" />
+    <Compile Include="Components\Logging\IConfigurationReader.cs" />
+    <Compile Include="Components\Logging\ILog.cs" />
+    <Compile Include="Components\Logging\ILoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\LogLevel.cs" />
+    <Compile Include="Components\Logging\LogManager.cs" />
+    <Compile Include="Components\Logging\Simple\AbstractSimpleLogger.cs" />
+    <Compile Include="Components\Logging\Simple\AbstractSimpleLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\Simple\CapturingLogger.cs" />
+    <Compile Include="Components\Logging\Simple\CapturingLoggerEvent.cs" />
+    <Compile Include="Components\Logging\Simple\CapturingLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\Simple\CommonLoggingTraceListener.cs" />
+    <Compile Include="Components\Logging\Simple\ConsoleOutLogger.cs" />
+    <Compile Include="Components\Logging\Simple\ConsoleOutLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\Simple\NoOpLogger.cs" />
+    <Compile Include="Components\Logging\Simple\NoOpLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Logging\Simple\TraceLogger.cs" />
+    <Compile Include="Components\Logging\Simple\TraceLoggerFactoryAdapter.cs" />
+    <Compile Include="Components\Quartz\Collection\HashSet.cs" />
+    <Compile Include="Components\Quartz\Collection\ISet.cs" />
+    <Compile Include="Components\Quartz\Collection\ISortedSet.cs" />
+    <Compile Include="Components\Quartz\Collection\TreeSet.cs" />
+    <Compile Include="Components\Quartz\Core\IJobRunShellFactory.cs" />
+    <Compile Include="Components\Quartz\Core\JobRunShell.cs" />
+    <Compile Include="Components\Quartz\Core\QuartzScheduler.cs" />
+    <Compile Include="Components\Quartz\Core\QuartzSchedulerResources.cs" />
+    <Compile Include="Components\Quartz\Core\QuartzSchedulerThread.cs" />
+    <Compile Include="Components\Quartz\Core\SchedulerSignalerImpl.cs" />
+    <Compile Include="Components\Quartz\Core\SchedulingContext.cs" />
+    <Compile Include="Components\Quartz\CriticalSchedulerException.cs" />
+    <Compile Include="Components\Quartz\CronExpression.cs" />
+    <Compile Include="Components\Quartz\CronTrigger.cs" />
+    <Compile Include="Components\Quartz\DateIntervalTrigger.cs" />
+    <Compile Include="Components\Quartz\ICalendar.cs" />
+    <Compile Include="Components\Quartz\IInterruptableJob.cs" />
+    <Compile Include="Components\Quartz\IJob.cs" />
+    <Compile Include="Components\Quartz\IJobListener.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\AdoConstants.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\AdoJobStoreUtil.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\AdoUtil.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\Common\DbMetadata.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\Common\DbProvider.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\Common\DbProviderFactory.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\Common\IDbProvider.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\DBSemaphore.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\FiredTriggerRecord.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\IDriverDelegate.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\InvalidConfigurationException.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\ISemaphore.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\ITablePrefixAware.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\JobStoreCMT.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\JobStoreSupport.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\JobStoreTX.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\LockException.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\MySQLDelegate.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\NoSuchDelegateException.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\OracleDelegate.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\PostgreSQLDelegate.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\SchedulerStateRecord.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\SimpleSemaphore.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\SqlServerDelegate.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\StdAdoConstants.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\StdAdoDelegate.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\StdRowLockSemaphore.cs" />
+    <Compile Include="Components\Quartz\Impl\AdoJobStore\UpdateRowLockSemaphore.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\AnnualCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\BaseCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\CronCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\DailyCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\HolidayCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\MonthlyCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\Calendar\WeeklyCalendar.cs" />
+    <Compile Include="Components\Quartz\Impl\DirectSchedulerFactory.cs" />
+    <Compile Include="Components\Quartz\Impl\RemoteScheduler.cs" />
+    <Compile Include="Components\Quartz\Impl\SchedulerDetailsSetter.cs" />
+    <Compile Include="Components\Quartz\Impl\SchedulerRepository.cs" />
+    <Compile Include="Components\Quartz\Impl\StdJobRunShellFactory.cs" />
+    <Compile Include="Components\Quartz\Impl\StdScheduler.cs" />
+    <Compile Include="Components\Quartz\Impl\StdSchedulerFactory.cs" />
+    <Compile Include="Components\Quartz\IScheduler.cs" />
+    <Compile Include="Components\Quartz\ISchedulerFactory.cs" />
+    <Compile Include="Components\Quartz\ISchedulerListener.cs" />
+    <Compile Include="Components\Quartz\IStatefulJob.cs" />
+    <Compile Include="Components\Quartz\ITriggerListener.cs" />
+    <Compile Include="Components\Quartz\JobDataMap.cs" />
+    <Compile Include="Components\Quartz\JobDetail.cs" />
+    <Compile Include="Components\Quartz\JobExecutionContext.cs" />
+    <Compile Include="Components\Quartz\JobExecutionException.cs" />
+    <Compile Include="Components\Quartz\JobPersistenceException.cs" />
+    <Compile Include="Components\Quartz\Job\FileScanJob.cs" />
+    <Compile Include="Components\Quartz\Job\IFileScanListener.cs" />
+    <Compile Include="Components\Quartz\Job\NativeJob.cs" />
+    <Compile Include="Components\Quartz\Job\NoOpJob.cs" />
+    <Compile Include="Components\Quartz\Job\SendMailJob.cs" />
+    <Compile Include="Components\Quartz\Listener\BroadcastSchedulerListener.cs" />
+    <Compile Include="Components\Quartz\Listener\FilterAndBroadcastJobListener.cs" />
+    <Compile Include="Components\Quartz\Listener\FilterAndBroadcastTriggerListener.cs" />
+    <Compile Include="Components\Quartz\Listener\JobChainingJobListener.cs" />
+    <Compile Include="Components\Quartz\Listener\JobListenerSupport.cs" />
+    <Compile Include="Components\Quartz\Listener\SchedulerListenerSupport.cs" />
+    <Compile Include="Components\Quartz\Listener\TriggerListenerSupport.cs" />
+    <Compile Include="Components\Quartz\MisfireInstruction.cs" />
+    <Compile Include="Components\Quartz\NthIncludedDayTrigger.cs" />
+    <Compile Include="Components\Quartz\ObjectAlreadyExistsException.cs" />
+    <Compile Include="Components\Quartz\Plugin\History\LoggingJobHistoryPlugin.cs" />
+    <Compile Include="Components\Quartz\Plugin\History\LoggingTriggerHistoryPlugin.cs" />
+    <Compile Include="Components\Quartz\Plugin\Management\ShutdownHookPlugin.cs" />
+    <Compile Include="Components\Quartz\Plugin\Xml\JobInitializationPlugin.cs" />
+    <Compile Include="Components\Quartz\QuartzThread.cs" />
+    <Compile Include="Components\Quartz\SchedulerConfigException.cs" />
+    <Compile Include="Components\Quartz\SchedulerConstants.cs" />
+    <Compile Include="Components\Quartz\SchedulerContext.cs" />
+    <Compile Include="Components\Quartz\SchedulerException.cs" />
+    <Compile Include="Components\Quartz\SchedulerInstruction.cs" />
+    <Compile Include="Components\Quartz\SchedulerMetaData.cs" />
+    <Compile Include="Components\Quartz\Server\Configuration.cs" />
+    <Compile Include="Components\Quartz\Server\IQuartzServer.cs" />
+    <Compile Include="Components\Quartz\Server\QuartzServer.cs" />
+    <Compile Include="Components\Quartz\Server\QuartzServerFactory.cs" />
+    <Compile Include="Components\Quartz\SimpleTrigger.cs" />
+    <Compile Include="Components\Quartz\Simpl\HostnameInstanceIdGenerator.cs" />
+    <Compile Include="Components\Quartz\Simpl\IRemotableQuartzScheduler.cs" />
+    <Compile Include="Components\Quartz\Simpl\PropertySettingJobFactory.cs" />
+    <Compile Include="Components\Quartz\Simpl\RAMJobStore.cs" />
+    <Compile Include="Components\Quartz\Simpl\RemotingSchedulerExporter.cs" />
+    <Compile Include="Components\Quartz\Simpl\SimpleInstanceIdGenerator.cs" />
+    <Compile Include="Components\Quartz\Simpl\SimpleJobFactory.cs" />
+    <Compile Include="Components\Quartz\Simpl\SimpleThreadPool.cs" />
+    <Compile Include="Components\Quartz\Simpl\SimpleTypeLoadHelper.cs" />
+    <Compile Include="Components\Quartz\Simpl\ZeroSizeThreadPool.cs" />
+    <Compile Include="Components\Quartz\SPI\IInstanceIdGenerator.cs" />
+    <Compile Include="Components\Quartz\SPI\IJobFactory.cs" />
+    <Compile Include="Components\Quartz\SPI\IJobStore.cs" />
+    <Compile Include="Components\Quartz\SPI\ISchedulerExporter.cs" />
+    <Compile Include="Components\Quartz\SPI\ISchedulerPlugin.cs" />
+    <Compile Include="Components\Quartz\SPI\ISchedulerSignaler.cs" />
+    <Compile Include="Components\Quartz\SPI\IThreadPool.cs" />
+    <Compile Include="Components\Quartz\SPI\ITypeLoadHelper.cs" />
+    <Compile Include="Components\Quartz\SPI\TriggerFiredBundle.cs" />
+    <Compile Include="Components\Quartz\Trigger.cs" />
+    <Compile Include="Components\Quartz\TriggerState.cs" />
+    <Compile Include="Components\Quartz\TriggerUtils.cs" />
+    <Compile Include="Components\Quartz\UnableToInterruptJobException.cs" />
+    <Compile Include="Components\Quartz\Util\DateTimeUtil.cs" />
+    <Compile Include="Components\Quartz\Util\DBConnectionManager.cs" />
+    <Compile Include="Components\Quartz\Util\DirtyFlagMap.cs" />
+    <Compile Include="Components\Quartz\Util\FileUtil.cs" />
+    <Compile Include="Components\Quartz\Util\Key.cs" />
+    <Compile Include="Components\Quartz\Util\LogicalThreadContext.cs" />
+    <Compile Include="Components\Quartz\Util\ObjectUtils.cs" />
+    <Compile Include="Components\Quartz\Util\Pair.cs" />
+    <Compile Include="Components\Quartz\Util\PropertiesParser.cs" />
+    <Compile Include="Components\Quartz\Util\StringKeyDirtyFlagMap.cs" />
+    <Compile Include="Components\Quartz\Util\TriggerStatus.cs" />
+    <Compile Include="Components\Quartz\Xml\CalendarBundle.cs" />
+    <Compile Include="Components\Quartz\Xml\JobSchedulingBundle.cs" />
+    <Compile Include="Components\Quartz\Xml\JobSchedulingDataProcessor.cs" />
+    <Compile Include="Components\Quartz\Xml\job_scheduling_data.cs">
+      <DependentUpon>job_scheduling_data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Quartz\Xml\ValidationException.cs" />
+    <Compile Include="Components\SmartThreadPool\EventWaitHandle.cs" />
+    <Compile Include="Components\SmartThreadPool\EventWaitHandleFactory.cs" />
+    <Compile Include="Components\SmartThreadPool\SynchronizedDictionary.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItemResultTWrapper.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItemsGroupBase.cs" />
+    <Compile Include="Components\Zip\Crc32.cs" />
+    <Compile Include="Components\Zip\Deflate.cs" />
+    <Compile Include="Components\Zip\DeflateStream.cs" />
+    <Compile Include="Components\Zip\EncryptionAlgorithm.cs" />
+    <Compile Include="Components\Zip\Events.cs" />
+    <Compile Include="Components\Zip\Exceptions.cs" />
+    <Compile Include="Components\Zip\ExtractExistingFileAction.cs" />
+    <Compile Include="Components\Zip\FileSelector.cs" />
+    <Compile Include="Components\Zip\GZipStream.cs" />
+    <Compile Include="Components\Zip\Inflate.cs" />
+    <Compile Include="Components\Zip\InfTree.cs" />
+    <Compile Include="Components\Zip\OffsetStream.cs" />
+    <Compile Include="Components\Zip\ParallelDeflateOutputStream.cs" />
+    <Compile Include="Components\Zip\Shared.cs" />
+    <Compile Include="Components\Zip\Tree.cs" />
+    <Compile Include="Components\Zip\WinZipAes.cs" />
+    <Compile Include="Components\Zip\ZipConstants.cs" />
+    <Compile Include="Components\Zip\ZipCrypto.cs" />
+    <Compile Include="Components\Zip\ZipDirEntry.cs" />
+    <Compile Include="Components\Zip\ZipEntry.cs" />
+    <Compile Include="Components\Zip\ZipEntry.Extract.cs" />
+    <Compile Include="Components\Zip\ZipEntry.Read.cs" />
+    <Compile Include="Components\Zip\ZipEntry.Write.cs" />
+    <Compile Include="Components\Zip\ZipEntrySource.cs" />
+    <Compile Include="Components\Zip\ZipErrorAction.cs" />
+    <Compile Include="Components\Zip\ZipFile.AddUpdate.cs" />
+    <Compile Include="Components\Zip\ZipFile.Check.cs" />
+    <Compile Include="Components\Zip\ZipFile.cs" />
+    <Compile Include="Components\Zip\ZipFile.Events.cs" />
+    <Compile Include="Components\Zip\ZipFile.Extract.cs" />
+    <Compile Include="Components\Zip\ZipFile.Read.cs" />
+    <Compile Include="Components\Zip\ZipFile.Save.cs" />
+    <Compile Include="Components\Zip\ZipFile.SaveSelfExtractor.cs" />
+    <Compile Include="Components\Zip\ZipFile.Selector.cs" />
+    <Compile Include="Components\Zip\ZipFile.x-IEnumerable.cs" />
+    <Compile Include="Components\Zip\ZipInputStream.cs" />
+    <Compile Include="Components\Zip\ZipOutputStream.cs" />
+    <Compile Include="Components\Zip\ZipSegmentedStream.cs" />
+    <Compile Include="Components\Zip\Zlib.cs" />
+    <Compile Include="Components\Zip\ZlibBaseStream.cs" />
+    <Compile Include="Components\Zip\ZlibCodec.cs" />
+    <Compile Include="Components\Zip\ZlibConstants.cs" />
+    <Compile Include="Components\Zip\ZlibStream.cs" />
+    <Compile Include="Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Core\ApplicationHelper.cs" />
+    <Compile Include="Core\Constants.cs" />
+    <Compile Include="Core\DosCommand.cs" />
+    <Compile Include="Core\EncryptHelper.cs" />
+    <Compile Include="Core\Extension\Date.cs" />
+    <Compile Include="Core\Extension\String.cs" />
+    <Compile Include="Core\IdentityCard.cs" />
+    <Compile Include="Components\SmartThreadPool\CallerThreadContext.cs" />
+    <Compile Include="Components\SmartThreadPool\Exceptions.cs" />
+    <Compile Include="Components\SmartThreadPool\Interfaces.cs" />
+    <Compile Include="Components\SmartThreadPool\PriorityQueue.cs" />
+    <Compile Include="Components\SmartThreadPool\SmartThreadPool.cs" />
+    <Compile Include="Components\SmartThreadPool\STPPerformanceCounter.cs" />
+    <Compile Include="Components\SmartThreadPool\STPStartInfo.cs" />
+    <Compile Include="Components\SmartThreadPool\WIGStartInfo.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItem.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItemFactory.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItemInfo.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItemsGroup.cs" />
+    <Compile Include="Components\SmartThreadPool\WorkItemsQueue.cs" />
+    <Compile Include="Configuration\WindowServiceSelfInstaller.cs" />
+    <Compile Include="Core\DuplicateException.cs" />
+    <Compile Include="Core\Extension\Converter.cs" />
+    <Compile Include="Core\ObjectStatus.cs" />
+    <Compile Include="Core\StringHelper.cs" />
+    <Compile Include="Data\DataExtension.cs" />
+    <Compile Include="DirectoryService\Extension.cs" />
+    <Compile Include="Drawing\DrawingExtension.cs" />
+    <Compile Include="Drawing\ImageHelper.cs" />
+    <Compile Include="IO\Compression\CompressionExtension.cs" />
+    <Compile Include="IO\IOExtension.cs" />
+    <Compile Include="Linq\Dynamic.cs" />
+    <Compile Include="Math\MathExtension.cs" />
+    <Compile Include="Math\Pager.cs" />
+    <Compile Include="Media\ExifInfo.cs" />
+    <Compile Include="Microsoft\IIS\IIsApplicationPool.cs" />
+    <Compile Include="Microsoft\IIS\IIsDirectory.cs" />
+    <Compile Include="Microsoft\IIS\IIsEnums.cs" />
+    <Compile Include="Microsoft\IIS\IIsFile.cs" />
+    <Compile Include="Microsoft\IIS\IIsHelper.cs" />
+    <Compile Include="Microsoft\IIS\IIsService.cs" />
+    <Compile Include="Microsoft\IIS\IIsSite.cs" />
+    <Compile Include="Microsoft\IIS\IIsStructures.cs" />
+    <Compile Include="Microsoft\IIS\IIsVirtualDirectory.cs" />
+    <Compile Include="Microsoft\ServiceHelper.cs" />
+    <Compile Include="Net\MailMessageMimeParser.cs" />
+    <Compile Include="Net\NetExtension.cs" />
+    <Compile Include="Properties\CommonResources.Designer.cs" />
+    <Compile Include="Properties\DataResources.Designer.cs" />
+    <Compile Include="Properties\LoggingResources.Designer.cs" />
+    <Compile Include="Properties\ServiceLocationResources.Designer.cs" />
+    <Compile Include="Properties\UnityInterceptionResources.Designer.cs" />
+    <Compile Include="Properties\UnityResources.Designer.cs" />
+    <Compile Include="Reflection\DynamicMethodHelper.cs" />
+    <Compile Include="Reflection\ReflectionExtension.cs" />
+    <Compile Include="Core\ValidateException.cs" />
+    <Compile Include="Extension\System.Net\IPAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extension\System\Array.cs" />
+    <Compile Include="Extension\System\Object.cs" />
+    <Compile Include="Core\Extension\CoreExtension.cs" />
+    <Compile Include="IO\DebugWriter.cs" />
+    <Compile Include="Core\SingletonProvider.cs" />
+    <Compile Include="Net\IPAddress.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\DynamicMethodCompiler.cs" />
+    <Compile Include="Services\JobSchelude\Adapter\JobAdapter.cs" />
+    <Compile Include="Services\JobSchelude\Adapter\TriggerAdapter.cs" />
+    <Compile Include="Services\JobSchelude\ClientProxy\ScheduleService.cs" />
+    <Compile Include="Services\JobSchelude\Data\ServiceDataContext.cs" />
+    <Compile Include="Services\JobSchelude\IScheduleService.cs" />
+    <Compile Include="Services\JobSchelude\Job\IJobWork.cs" />
+    <Compile Include="Services\JobSchelude\Job\Job.cs" />
+    <Compile Include="Services\JobSchelude\Job\JobExecuter.cs" />
+    <Compile Include="Services\JobSchelude\Job\JobHistory.cs" />
+    <Compile Include="Services\JobSchelude\Job\JobHistoryListener.cs" />
+    <Compile Include="Services\JobSchelude\Job\JobRunTimeInfo.cs" />
+    <Compile Include="Services\JobSchelude\Job\JobState.cs" />
+    <Compile Include="Services\JobSchelude\Job\Mode.cs" />
+    <Compile Include="Services\JobSchelude\Job\State.cs" />
+    <Compile Include="Services\JobSchelude\ScheduleService.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\Daily.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\DailyFrequency.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\Frequency.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\Monthly.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\OnceDailyFrequency.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\RecurvedTrigger.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\RepeatedDailyFrequency.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\Trigger.cs" />
+    <Compile Include="Services\JobSchelude\Trigger\Weekly.cs" />
+    <Compile Include="Utility\City.cs" />
+    <Compile Include="Validation\ValidationExtension.cs" />
+    <Compile Include="Web\AntiXss\AntiXSS.cs" />
+    <Compile Include="Web\AntiXss\AntiXssModule.cs" />
+    <Compile Include="Web\AntiXss\Configuration\ControlEncodingContext.cs" />
+    <Compile Include="Web\AntiXss\Configuration\ControlEncodingContexts.cs" />
+    <Compile Include="Web\AntiXss\Configuration\ModuleConfiguration.cs" />
+    <Compile Include="Web\AntiXss\PageProtection\IPageProtection.cs" />
+    <Compile Include="Web\AntiXss\PageProtection\XssProtection.cs" />
+    <Compile Include="Web\AntiXss\SupressAntiXssEncodingAttribute.cs" />
+    <Compile Include="Web\Compression\Filters\AutoModeFilterStream.cs" />
+    <Compile Include="Web\Compression\Handlers\CachingStorageFactory.cs" />
+    <Compile Include="Web\Compression\Handlers\CompressionHandlerBase.cs" />
+    <Compile Include="Web\Compression\Handlers\CssCompressionHandler.cs" />
+    <Compile Include="Web\Compression\Handlers\FileSystemStorage.cs" />
+    <Compile Include="Web\Compression\Handlers\ICachingStorage.cs" />
+    <Compile Include="Web\Compression\Handlers\JavaScriptCompressionHandler.cs" />
+    <Compile Include="Web\Compression\Handlers\OutputCacheStorage.cs" />
+    <Compile Include="Web\Compression\Modules\WebCompressionModule.cs" />
+    <Compile Include="Web\Compression\Modules\WebResourceCompressionModule.cs" />
+    <Compile Include="Web\Compression\Settings.cs" />
+    <Compile Include="Web\Compression\Utils\CssMinifier.cs" />
+    <Compile Include="Web\Compression\Utils\EmptyMembership.cs" />
+    <Compile Include="Web\Compression\Utils\EncodingManager.cs" />
+    <Compile Include="Web\Compression\Utils\JavaScriptMinifier.cs" />
+    <Compile Include="Web\Compression\Utils\Quadruplet.cs" />
+    <Compile Include="Web\Compression\Utils\SR.cs" />
+    <Compile Include="Web\Compression\Utils\Util.cs" />
+    <Compile Include="Web\AntiXss\Globalization\CodepageDetect.cs" />
+    <Compile Include="Web\AntiXss\Globalization\CodepageDetectData.cs" />
+    <Compile Include="Web\AntiXss\Globalization\CodepageMap.cs" />
+    <Compile Include="Web\AntiXss\Globalization\CodepageMapData.cs" />
+    <Compile Include="Web\AntiXss\Globalization\CultureDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\AntiXss\Globalization\GlobalizationExceptions.cs" />
+    <Compile Include="Web\AntiXss\Globalization\Microsoft.Exchange.CtsResources.GlobalizationStrings.cs" />
+    <Compile Include="Web\AntiXss\Globalization\OutboundCodepageDetector.cs" />
+    <Compile Include="Web\HtmlMetadata.cs" />
+    <Compile Include="Web\PageHandler.cs" />
+    <Compile Include="Web\Routing\IRoutablePage.cs" />
+    <Compile Include="Web\Routing\RoutablePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Routing\RouteExtensions.cs" />
+    <Compile Include="Web\Routing\WebFormRoute.cs" />
+    <Compile Include="Web\Routing\WebFormRouteExtensions.cs" />
+    <Compile Include="Web\Routing\WebFormRouteHandler.cs" />
+    <Compile Include="Web\Routing\WebHelper.cs" />
+    <Compile Include="Web\Security\CookieProtectionHelperWrapper.cs" />
+    <Compile Include="Web\Security\InvalidCypherTextException.cs" />
+    <Compile Include="Web\Security\MachineKeyCryptography.cs" />
+    <Compile Include="Web\Security\WebSecurityExtension.cs" />
+    <Compile Include="Web\AntiXss\Shared\ApplicationServices.cs" />
+    <Compile Include="Web\AntiXss\Shared\AutoPositionStream.cs" />
+    <Compile Include="Web\AntiXss\Shared\ByteString.cs" />
+    <Compile Include="Web\AntiXss\Shared\Configuration.cs" />
+    <Compile Include="Web\AntiXss\Shared\DataException.cs" />
+    <Compile Include="Web\AntiXss\Shared\ICloneableStream.cs" />
+    <Compile Include="Web\AntiXss\Shared\InternalDebug.cs" />
+    <Compile Include="Web\AntiXss\Shared\Microsoft.Exchange.CtsResources.SharedStrings.cs" />
+    <Compile Include="Web\AntiXss\Shared\NativeMethods.cs" />
+    <Compile Include="Web\AntiXss\Shared\ScratchPad.cs" />
+    <Compile Include="Web\AntiXss\Shared\SuppressCloseStream.cs" />
+    <Compile Include="Web\AntiXss\Shared\TempFileStream.cs" />
+    <Compile Include="Web\AntiXss\Shared\VirtualStream.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ByteCache.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\CommonTypes.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterBufferInput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterDecodingInput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterEncodingOutput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterInput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterOutput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterUnicodeInput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ConverterUnicodeOutput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\HashCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\HtmlInjection.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\Injection.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ParseSupport.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\ScratchBuffer.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\StringBuildSink.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\TextCache.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\TextWriterSink.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\Token.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\TokenBuilder.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\COMMON\UrlCompareSink.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\ConverterCommon.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\ConverterReader.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\ConverterStream.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\ConverterWriter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\CSS\CssData.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\CSS\CssParser.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\CSS\CssToken.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\CSS\CssTokenBuilder.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\FORMAT\FormatConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\FORMAT\FormatOutput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\FORMAT\FormatProperty.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\FORMAT\FormatStore.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\FORMAT\FormatStoreData.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\FORMAT\FormatTypes.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HtmlToHtml.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlCallback.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlConverterData.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlData.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlFilterData.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlFormatConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlFormatOutput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlNameData.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlNames.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlNormalizingParser.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlParser.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlReader.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlSupport.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlTextExtractionConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlToHtmlConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlToken.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlTokenBuilder.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlToTextConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\HTML\HtmlWriter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\Microsoft.Exchange.CtsResources.TextConvertersStrings.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEST\TestHtmlTrace.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEST\TestTextOutputTrace.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TextConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TextConvertersDefaults.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextCodepageConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextFormatConverter.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextOutput.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextParser.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextToken.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextTokenBuilder.cs" />
+    <Compile Include="Web\AntiXss\TextConverters\TEXT\TextToTextConverter.cs" />
+    <Compile Include="Web\ViewState\IViewStateUniqueID.cs" />
+    <Compile Include="Web\ViewState\ViewStateApplicationCacheStorage.cs" />
+    <Compile Include="Web\ViewState\ViewStateConfiguration.cs" />
+    <Compile Include="Web\ViewState\NoViewStateBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ViewState\ViewStateNotFoundException.cs" />
+    <Compile Include="Web\ViewState\ViewStateSessionStorage.cs" />
+    <Compile Include="Web\ViewState\ViewStateSQLStorage.cs" />
+    <Compile Include="Web\ViewState\ViewstateStorage.cs" />
+    <Compile Include="Net\WebDownloader.cs" />
+    <Compile Include="Web\WebExtension.cs" />
+    <Compile Include="Web\WebHelper.cs" />
+    <Compile Include="XML\Sgml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XML\XMLExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Components\Castle\MicroKernel\change.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResource\xhtml-strict.dtd" />
+    <EmbeddedResource Include="Web\AntiXss\Globalization\Microsoft.Exchange.CtsResources.GlobalizationStrings.resx">
+      <DependentUpon>Microsoft.Exchange.CtsResources.GlobalizationStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\AntiXss\Shared\Microsoft.Exchange.CtsResources.SharedStrings.resx">
+      <DependentUpon>Microsoft.Exchange.CtsResources.SharedStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\AntiXss\TextConverters\Microsoft.Exchange.CtsResources.TextConvertersStrings.resx">
+      <DependentUpon>Microsoft.Exchange.CtsResources.TextConvertersStrings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\EnterpriseLibrary\Common\Configuration\DesignResources.resx" />
+    <EmbeddedResource Include="Components\EnterpriseLibrary\Common\Configuration\Manageability\Properties\Resources.resx" />
+    <EmbeddedResource Include="Components\EnterpriseLibrary\Data\Configuration\DesignResources.resx" />
+    <EmbeddedResource Include="Components\EnterpriseLibrary\Data\Configuration\Manageability\Properties\Resources.resx" />
+    <EmbeddedResource Include="Components\EnterpriseLibrary\Logging\Configuration\DesignResources.resx" />
+    <EmbeddedResource Include="Components\EnterpriseLibrary\Logging\Configuration\Manageability\Properties\Resources.resx" />
+    <EmbeddedResource Include="Components\Quartz\Impl\AdoJobStore\Common\dbproviders.properties" />
+    <EmbeddedResource Include="Components\Quartz\quartz.config" />
+    <EmbeddedResource Include="Properties\CommonResources.resx" />
+    <EmbeddedResource Include="Properties\DataResources.resx" />
+    <EmbeddedResource Include="Properties\LoggingResources.resx" />
+    <EmbeddedResource Include="Properties\ServiceLocationResources.resx" />
+    <EmbeddedResource Include="Properties\UnityInterceptionResources.resx" />
+    <EmbeddedResource Include="Properties\UnityResources.resx" />
+    <None Include="Components\Quartz\Xml\job_scheduling_data.xsd" />
+    <None Include="Components\Quartz\Xml\job_scheduling_data.xsx">
+      <DependentUpon>job_scheduling_data.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
