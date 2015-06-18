@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Net;
 using System.Net.Mail;
 using System.Reflection;
-using System.Text;
 
 namespace JasonSoft.Net
 {
@@ -65,7 +63,7 @@ namespace JasonSoft.Net
         }
 
 
-        public static UInt32 ToNumber(this System.Net.IPAddress source)
+        public static UInt32 ToNumber(this IPAddress source)
         {
             return BitConverter.ToUInt32(source.GetAddressBytes(), 0);
         }

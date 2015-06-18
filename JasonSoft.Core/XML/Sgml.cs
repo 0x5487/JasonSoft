@@ -1,12 +1,11 @@
 using System;
-using System.IO;
-using System.Reflection;
 using System.Collections;
 using System.Globalization;
-using System.Xml;
+using System.IO;
 using System.Net;
+using System.Reflection;
 using System.Text;
-
+using System.Xml;
 
 namespace JasonSoft.XML
 {
@@ -228,7 +227,7 @@ namespace JasonSoft.XML
 		public char SkipWhitespace()
 		{
 			char ch = Lastchar;
-			while (ch != Entity.EOF && (ch == ' ' || ch == '\r' || ch == '\n' || ch == '\t'))
+			while (ch != EOF && (ch == ' ' || ch == '\r' || ch == '\n' || ch == '\t'))
 			{
 				ch = ReadChar();
 			}
@@ -244,7 +243,7 @@ namespace JasonSoft.XML
 				throw new Exception(
 					String.Format("Invalid name start character '{0}'", ch));
 			}
-			while (ch != Entity.EOF && term.IndexOf(ch)<0)
+			while (ch != EOF && term.IndexOf(ch)<0)
 			{
 				if (!nmtoken || ch == '_' || ch == '.' || ch == '-' || ch == ':' || Char.IsLetterOrDigit(ch))
 				{
@@ -264,7 +263,7 @@ namespace JasonSoft.XML
 		{
 			sb.Length = 0;
 			char ch = ReadChar();
-			while (ch != Entity.EOF && ch != quote )
+			while (ch != EOF && ch != quote )
 			{
 				if (ch == '&')
 				{
@@ -299,7 +298,7 @@ namespace JasonSoft.XML
 			char ch = ReadChar();
 			int state = 0;
 			char next = terminators[state];
-			while (ch != Entity.EOF)
+			while (ch != EOF)
 			{
 				if (ch == next)
 				{
@@ -370,7 +369,7 @@ namespace JasonSoft.XML
 			int v = 0;
 			if (ch == 'x')
 			{
-				for (; ch != Entity.EOF && ch != ';'; ch = ReadChar())
+				for (; ch != EOF && ch != ';'; ch = ReadChar())
 				{
 					int p = 0;
 					if (ch >= '0' && ch <= '9')
@@ -395,7 +394,7 @@ namespace JasonSoft.XML
 			}
 			else
 			{
-				for (; ch != Entity.EOF && ch != ';'; ch = ReadChar())
+				for (; ch != EOF && ch != ';'; ch = ReadChar())
 				{
 					if (ch >= '0' && ch <= '9')
 					{
@@ -438,7 +437,7 @@ namespace JasonSoft.XML
 
 		public void Error(string msg, char ch)
 		{
-			string str = (ch == Entity.EOF) ? "EOF" : Char.ToString(ch);
+			string str = (ch == EOF) ? "EOF" : Char.ToString(ch);
 			throw new Exception(String.Format(msg, str));
 		}
 
@@ -581,7 +580,7 @@ namespace JasonSoft.XML
 			{
 				if (pos < used)
 				{
-					System.Array.Copy(buffer, pos, buffer, 0, used - pos);
+					Array.Copy(buffer, pos, buffer, 0, used - pos);
 				}
 				used -= pos;
 				pos = 0;
@@ -591,7 +590,7 @@ namespace JasonSoft.XML
 			if (available < len)
 			{
 				char[] newbuf = new char[buffer.Length + len];
-				System.Array.Copy(buffer, pos, newbuf, 0, used - pos);
+				Array.Copy(buffer, pos, newbuf, 0, used - pos);
 				buffer = newbuf;
 			}
 			used = pos + decoder.GetChars(rawBuffer, rawPos, rawUsed - rawPos, buffer, pos);
@@ -1637,7 +1636,7 @@ namespace JasonSoft.XML
 						ch = this.current.ReadChar();
 						break;
 					case '%':
-						Entity e = ParseParameterEntity(SgmlDtd.WhiteSpace);
+						Entity e = ParseParameterEntity(WhiteSpace);
 						try
 						{
 							PushEntity(this.current.ResolvedUri, e);
@@ -1677,7 +1676,7 @@ namespace JasonSoft.XML
 			}
 			else
 			{
-				string token = this.current.ScanToken(this.sb, SgmlDtd.WhiteSpace, true);
+				string token = this.current.ScanToken(this.sb, WhiteSpace, true);
 				switch (token)
 				{
 					case "ENTITY":
@@ -1800,7 +1799,7 @@ namespace JasonSoft.XML
 				this.current.ReadChar(); // move to next char
 				ch = this.current.SkipWhitespace();
 			}
-			string name = this.current.ScanToken(this.sb, SgmlDtd.WhiteSpace, true);
+			string name = this.current.ScanToken(this.sb, WhiteSpace, true);
 			name = this.nameTable.Add(name);
 			ch = this.current.SkipWhitespace();
 			Entity e = null;
@@ -1813,7 +1812,7 @@ namespace JasonSoft.XML
 			{
 				string pubid = null;
 				string extid = null;
-				string tok = this.current.ScanToken(this.sb, SgmlDtd.WhiteSpace, true);
+				string tok = this.current.ScanToken(this.sb, WhiteSpace, true);
 				if (Entity.IsLiteralType(tok) )
 				{
 					ch = this.current.SkipWhitespace();
@@ -1953,7 +1952,7 @@ namespace JasonSoft.XML
 					ch = this.current.SkipWhitespace();
 					if (ch == '%')
 					{
-						Entity e = ParseParameterEntity(SgmlDtd.ngterm);
+						Entity e = ParseParameterEntity(ngterm);
 						PushEntity(this.current.ResolvedUri, e);
 						ParseNameList(names, nmtokens);
 						PopEntity();
@@ -1961,7 +1960,7 @@ namespace JasonSoft.XML
 					}
 					else
 					{
-						string token = this.current.ScanToken(this.sb, SgmlDtd.ngterm, nmtokens);
+						string token = this.current.ScanToken(this.sb, ngterm, nmtokens);
 						token = token.ToUpper();
 						string atom = this.nameTable.Add(token);
 						names.Add(atom);
@@ -1973,7 +1972,7 @@ namespace JasonSoft.XML
 			}
 			else
 			{
-				string name = this.current.ScanToken(this.sb, SgmlDtd.WhiteSpace, nmtokens);
+				string name = this.current.ScanToken(this.sb, WhiteSpace, nmtokens);
 				name = name.ToUpper();
 				name = this.nameTable.Add(name);
 				names.Add(name);
@@ -1990,7 +1989,7 @@ namespace JasonSoft.XML
 				string name;
 				if (ch == '%')
 				{
-					Entity e = ParseParameterEntity(SgmlDtd.ngterm);
+					Entity e = ParseParameterEntity(ngterm);
 					PushEntity(this.current.ResolvedUri, e);
 					ParseNameList(names, nmtokens);
 					PopEntity();
@@ -1998,7 +1997,7 @@ namespace JasonSoft.XML
 				}
 				else
 				{
-					name = this.current.ScanToken(this.sb, SgmlDtd.ngterm, true);
+					name = this.current.ScanToken(this.sb, ngterm, true);
 					name = name.ToUpper();
 					name = this.nameTable.Add(name);
 					names.Add(name);
@@ -2029,14 +2028,14 @@ namespace JasonSoft.XML
 			}
 			else if (ch == '%')
 			{
-				Entity e = ParseParameterEntity(SgmlDtd.dcterm);
+				Entity e = ParseParameterEntity(dcterm);
 				PushEntity(this.current.ResolvedUri, e);
 				cm = ParseContentModel(this.current.Lastchar);
 				PopEntity(); // bugbug should be at EOF.
 			}
 			else
 			{
-				string dc = ScanName(SgmlDtd.dcterm);
+				string dc = ScanName(dcterm);
 				cm.SetDeclaredContent(dc);
 			}
 			return cm;
@@ -2057,7 +2056,7 @@ namespace JasonSoft.XML
 				}
 				if (ch == '%')
 				{
-					Entity e = ParseParameterEntity(SgmlDtd.cmterm);
+					Entity e = ParseParameterEntity(cmterm);
 					PushEntity(this.current.ResolvedUri, e);
 					ParseModel(Entity.EOF, cm);
 					PopEntity();
@@ -2095,11 +2094,11 @@ namespace JasonSoft.XML
 					if (ch == '#')
 					{
 						ch = this.current.ReadChar();
-						token = "#" + this.current.ScanToken(this.sb, SgmlDtd.cmterm, true); // since '#' is not a valid name character.
+						token = "#" + this.current.ScanToken(this.sb, cmterm, true); // since '#' is not a valid name character.
 					}
 					else
 					{
-						token = this.current.ScanToken(this.sb, SgmlDtd.cmterm, true);
+						token = this.current.ScanToken(this.sb, cmterm, true);
 					}
 					token = token.ToUpper();
 					token = this.nameTable.Add(token);// atomize it.
@@ -2147,7 +2146,7 @@ namespace JasonSoft.XML
 			{
 				if (ch == '%')
 				{
-					Entity e = ParseParameterEntity(SgmlDtd.peterm);
+					Entity e = ParseParameterEntity(peterm);
 					PushEntity(this.current.ResolvedUri, e);
 					ParseAttList(list, Entity.EOF);
 					PopEntity();
@@ -2169,7 +2168,7 @@ namespace JasonSoft.XML
 		AttDef ParseAttDef(char ch)
 		{
 			ch = this.current.SkipWhitespace();
-			string name = ScanName(SgmlDtd.WhiteSpace);
+			string name = ScanName(WhiteSpace);
 			name = name.ToUpper();
 			name = this.nameTable.Add(name);
 			AttDef attdef = new AttDef(name);
@@ -2198,7 +2197,7 @@ namespace JasonSoft.XML
 		{
 			if (ch == '%')
 			{
-				Entity e = ParseParameterEntity(SgmlDtd.WhiteSpace);
+				Entity e = ParseParameterEntity(WhiteSpace);
 				PushEntity(this.current.ResolvedUri, e);
 				ParseAttType(this.current.Lastchar, attdef);
 				PopEntity(); // bugbug - are we at the end of the entity?
@@ -2213,7 +2212,7 @@ namespace JasonSoft.XML
 			}
 			else
 			{
-				string token = ScanName(SgmlDtd.WhiteSpace);
+				string token = ScanName(WhiteSpace);
 				if (token == "NOTATION")
 				{
 					ch = this.current.SkipWhitespace();
@@ -2235,7 +2234,7 @@ namespace JasonSoft.XML
 		{
 			if (ch == '%')
 			{
-				Entity e = ParseParameterEntity(SgmlDtd.WhiteSpace);
+				Entity e = ParseParameterEntity(WhiteSpace);
 				PushEntity(this.current.ResolvedUri, e);
 				ParseAttDefault(this.current.Lastchar, attdef);
 				PopEntity(); // bugbug - are we at the end of the entity?
@@ -2247,7 +2246,7 @@ namespace JasonSoft.XML
 			if (ch == '#')
 			{
 				this.current.ReadChar();
-				string token = this.current.ScanToken(this.sb, SgmlDtd.WhiteSpace, true);
+				string token = this.current.ScanToken(this.sb, WhiteSpace, true);
 				hasdef = attdef.SetPresence(token);
 				ch = this.current.SkipWhitespace();
 			}
@@ -2261,7 +2260,7 @@ namespace JasonSoft.XML
 				}
 				else
 				{
-					string name = this.current.ScanToken(this.sb, SgmlDtd.WhiteSpace, false);
+					string name = this.current.ScanToken(this.sb, WhiteSpace, false);
 					name = name.ToUpper();
 					name = this.nameTable.Add(name);
 					attdef.Default = name; // bugbug - must be one of the enumerated names.
@@ -3371,7 +3370,7 @@ namespace JasonSoft.XML
 				}
 				else
 				{
-					string name = this.current.ScanToken(this.sb, SgmlReader.declterm, false);
+					string name = this.current.ScanToken(this.sb, declterm, false);
 					if (name == "DOCTYPE")
 					{
 						ParseDocType();
@@ -3438,14 +3437,14 @@ namespace JasonSoft.XML
 			string name = null;
 			if (state != State.PseudoStartTag)
 			{
-				if (SgmlReader.tagterm.IndexOf(ch)>=0)
+				if (tagterm.IndexOf(ch)>=0)
 				{
 					this.sb.Length = 0;
 					this.sb.Append('<');
 					this.state = State.PartialText;
 					return false;
 				}
-				name = ScanName(SgmlReader.tagterm);
+				name = ScanName(tagterm);
 				if (this.IsHtml && this.Depth == 0 && name != "html" && name != "HTML")
 				{
 					Node root = Push("html", XmlNodeType.Element, null);
@@ -3483,7 +3482,7 @@ namespace JasonSoft.XML
 					Log("Start tag '{0}' is missing '>'", name);
 					break;
 				}
-				string aname = ScanName(SgmlReader.aterm);
+				string aname = ScanName(aterm);
 				ch = this.current.SkipWhitespace();
 				string value = null;
 				char quote = '\0';
@@ -3501,7 +3500,7 @@ namespace JasonSoft.XML
 					}
 					else if (ch != '>')
 					{
-						string term = SgmlReader.avterm;
+						string term = avterm;
 						value = this.current.ScanToken(this.sb, term, false);
 					}
 				}
@@ -3546,7 +3545,7 @@ namespace JasonSoft.XML
 		{
 			this.state = State.EndTag;
 			this.current.ReadChar(); // consume '/' char.
-			string name = this.ScanName(SgmlReader.tagterm);
+			string name = this.ScanName(tagterm);
 			char ch = this.current.SkipWhitespace();
 			if (ch != '>')
 			{
@@ -3649,7 +3648,7 @@ namespace JasonSoft.XML
 		void ParseDocType()
 		{
 			char ch = this.current.SkipWhitespace();
-			string name = this.ScanName(SgmlReader.dtterm);
+			string name = this.ScanName(dtterm);
 			Push(name, XmlNodeType.DocumentType, null);
 			ch = this.current.SkipWhitespace();
 			if (ch != '>')
@@ -3660,7 +3659,7 @@ namespace JasonSoft.XML
 
 				if (ch != '[')
 				{
-					string token = this.current.ScanToken(this.sb, SgmlReader.dtterm, false);
+					string token = this.current.ScanToken(this.sb, dtterm, false);
 					if (token == "PUBLIC")
 					{
 						ch = this.current.SkipWhitespace();
@@ -3711,7 +3710,7 @@ namespace JasonSoft.XML
 		static string piterm = " \t\r\n?";
 		bool ParsePI()
 		{
-			string name = this.current.ScanToken(this.sb, SgmlReader.piterm, false);
+			string name = this.current.ScanToken(this.sb, piterm, false);
 			string value = null;
 			if (this.current.Lastchar != '?')
 			{

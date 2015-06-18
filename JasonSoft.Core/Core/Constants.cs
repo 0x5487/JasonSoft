@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace JasonSoft
+﻿namespace JasonSoft
 {
     /// <summary>
     /// Summary for the RegexPattern class

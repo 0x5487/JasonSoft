@@ -17,7 +17,7 @@ using System;
 namespace JasonSoft.Web.ViewState
 {
     [Serializable]
-    public class ViewStateNotFoundException : System.Exception
+    public class ViewStateNotFoundException : Exception
     {
     }
 }

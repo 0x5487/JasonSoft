@@ -14,14 +14,16 @@
 
 
 using System;
+using System.Collections.Generic;
+using System.Configuration;
 
 namespace JasonSoft.Web.ViewState
 {
     public interface IViewstateStorage
     {
-        void Add(System.Collections.Generic.KeyValuePair<object, string> viewstateItem);
+        void Add(KeyValuePair<object, string> viewstateItem);
 
-        System.Collections.Generic.KeyValuePair<object, string> Get(object key);
+        KeyValuePair<object, string> Get(object key);
 
         void Remove(object key);
     }
@@ -31,7 +33,7 @@ namespace JasonSoft.Web.ViewState
         public static IViewstateStorage GetStorageMedium()
         {
             ViewStateConfiguration config =
-                (ViewStateConfiguration) System.Configuration.ConfigurationManager.GetSection("ViewStateConfiguration");
+                (ViewStateConfiguration) ConfigurationManager.GetSection("ViewStateConfiguration");
             IViewstateStorage _retval = GetStorageMedium(config.Mode);
             if (_retval == null)
             {
@@ -43,7 +45,7 @@ namespace JasonSoft.Web.ViewState
 
         public static IViewstateStorage GetStorageMedium(string type)
         {
-            System.Type Itype = System.Type.GetType(type);
+            Type Itype = Type.GetType(type);
             return ((IViewstateStorage) Activator.CreateInstance(Itype));
         }
 
@@ -51,8 +53,8 @@ namespace JasonSoft.Web.ViewState
         public static IViewStateUniqueID GetUserUniqueID()
         {
             ViewStateConfiguration config =
-                (ViewStateConfiguration) System.Configuration.ConfigurationManager.GetSection("ViewStateConfiguration");
-            System.Type Itype = System.Type.GetType(config.UniqueIDType);
+                (ViewStateConfiguration) ConfigurationManager.GetSection("ViewStateConfiguration");
+            Type Itype = Type.GetType(config.UniqueIDType);
             IViewStateUniqueID _retval = ((IViewStateUniqueID) Activator.CreateInstance(Itype));
             return _retval;
         }

@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly : AssemblyTitle("JasonSoft.Core")]
-[assembly: AssemblyDescription("2009")]
+[assembly: AssemblyDescription("2015")]
 [assembly : AssemblyConfiguration("")]
 [assembly: AssemblyCompany("JasonSoft")]
 [assembly : AssemblyProduct("JasonSoft.Core")]
-[assembly: AssemblyCopyright("Copyright © No 2007 ~ 2009")]
+[assembly: AssemblyCopyright("Copyright © No 2007 ~ 2015")]
 [assembly: AssemblyTrademark("JasonSoft")]
 [assembly : AssemblyCulture("")]
 
@@ -35,5 +35,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("2009.1.0.0")]
-[assembly: AssemblyFileVersion("2009.1.0.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]

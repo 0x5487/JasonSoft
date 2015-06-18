@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
 
 namespace JasonSoft.Reflection
 {
@@ -279,7 +276,7 @@ namespace JasonSoft.Reflection
         /// <summary>Emits the cast to a reference, unboxing if needed.</summary>
         /// <param name="ilGenerator">The MSIL generator.</param>
         /// <param name="type">The type to cast.</param>
-        private static void EmitCastToReference(ILGenerator ilGenerator, System.Type type)
+        private static void EmitCastToReference(ILGenerator ilGenerator, Type type)
         {
             if (type.IsValueType)
             {
@@ -294,7 +291,7 @@ namespace JasonSoft.Reflection
         /// <summary>Boxes a type if needed.</summary>
         /// <param name="ilGenerator">The MSIL generator.</param>
         /// <param name="type">The type.</param>
-        private static void EmitBoxIfNeeded(ILGenerator ilGenerator, System.Type type)
+        private static void EmitBoxIfNeeded(ILGenerator ilGenerator, Type type)
         {
             if (type.IsValueType)
             {

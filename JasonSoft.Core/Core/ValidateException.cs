@@ -18,7 +18,7 @@ using System;
 namespace JasonSoft
 {
     [Serializable]
-    public class ValidateException : System.Exception
+    public class ValidateException : Exception
     {
     }
 }

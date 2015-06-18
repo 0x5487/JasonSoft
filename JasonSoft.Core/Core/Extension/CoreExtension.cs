@@ -15,7 +15,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -23,12 +22,9 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Json;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Web.Script.Serialization;
-using System.Web;
+using System.Web.Security;
 using System.Xml;
 using JasonSoft.Reflection;
-
 
 namespace JasonSoft
 {
@@ -56,7 +52,7 @@ namespace JasonSoft
 
         public static string ToMD5(this string str)
         {
-            return System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(str, "MD5");
+            return FormsAuthentication.HashPasswordForStoringInConfigFile(str, "MD5");
         }
 
         
@@ -151,7 +147,7 @@ namespace JasonSoft
                 bf.Serialize(ms, source);
                 return true;
             }
-            catch (System.Runtime.Serialization.SerializationException)
+            catch (SerializationException)
             {
                 return false;
             }

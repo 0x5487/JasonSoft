@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.DirectoryServices;
+using System.Linq;
 using System.Runtime.InteropServices;
-
-using JasonSoft;
 
 namespace JasonSoft.Microsoft.IIS
 {
@@ -338,7 +334,7 @@ namespace JasonSoft.Microsoft.IIS
 
         #region "Public Functions and Methods"
 
-        public void StartSite([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(true)]  // ERROR: Optional parameters aren't supported in C#
+        public void StartSite([Optional, DefaultParameterValue(true)]  // ERROR: Optional parameters aren't supported in C#
 bool WaitTillDone)
         {
 
@@ -359,7 +355,7 @@ bool WaitTillDone)
 
         }
 
-        public void StopSite([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(true)]  // ERROR: Optional parameters aren't supported in C#
+        public void StopSite([Optional, DefaultParameterValue(true)]  // ERROR: Optional parameters aren't supported in C#
 bool WaitTillDone)
         {
 
@@ -380,7 +376,7 @@ bool WaitTillDone)
 
         }
 
-        public void PauseSite([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(true)]  // ERROR: Optional parameters aren't supported in C#
+        public void PauseSite([Optional, DefaultParameterValue(true)]  // ERROR: Optional parameters aren't supported in C#
 bool WaitTillDone)
         {
 
@@ -401,7 +397,7 @@ bool WaitTillDone)
 
         }
 
-        public void ContinueSite([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(true)]  // ERROR: Optional parameters aren't supported in C#
+        public void ContinueSite([Optional, DefaultParameterValue(true)]  // ERROR: Optional parameters aren't supported in C#
 bool WaitTillDone)
         {
 

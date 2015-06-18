@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.DirectoryServices;
-
+using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace JasonSoft.Microsoft.IIS
 {
@@ -307,8 +305,8 @@ namespace JasonSoft.Microsoft.IIS
 
         }
 
-        public IIsSite AddSite(string Description, string Path, string BindingHostHeader, [System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(80)]  // ERROR: Optional parameters aren't supported in C#
-int BindingPort, [System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute("")]  // ERROR: Optional parameters aren't supported in C#
+        public IIsSite AddSite(string Description, string Path, string BindingHostHeader, [Optional, DefaultParameterValue(80)]  // ERROR: Optional parameters aren't supported in C#
+int BindingPort, [Optional, DefaultParameterValue("")]  // ERROR: Optional parameters aren't supported in C#
 string BindingIP)
         {
 

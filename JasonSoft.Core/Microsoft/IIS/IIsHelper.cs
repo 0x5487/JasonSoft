@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.DirectoryServices;
 
 namespace JasonSoft.Microsoft.IIS
@@ -186,7 +183,7 @@ namespace JasonSoft.Microsoft.IIS
             try
             {
 
-                object SystemRoot = System.Environment.GetEnvironmentVariable("SystemRoot");
+                object SystemRoot = Environment.GetEnvironmentVariable("SystemRoot");
                 ASPNETVersions ServiceVersion = ASPNETVersions.v1_1_4322;
                 String AppPath = ApplicationPath.Replace(IIsProviderPath + "/", string.Empty).Replace('\\', '/') + "/";
                 String ServicePath = AppPath.Split('/')[0] + "/";
@@ -246,7 +243,7 @@ namespace JasonSoft.Microsoft.IIS
             try
             {
 
-                object SystemRoot = System.Environment.GetEnvironmentVariable("SystemRoot");
+                object SystemRoot = Environment.GetEnvironmentVariable("SystemRoot");
                 object AppRoot = ApplicationPath.Replace(IIsProviderPath + "/", string.Empty);
 
                 using (Process p = new Process())

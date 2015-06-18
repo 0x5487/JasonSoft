@@ -14,6 +14,7 @@
 
 
 using System.Collections.Generic;
+using System.Web;
 
 namespace JasonSoft.Web.ViewState
 {
@@ -22,18 +23,18 @@ namespace JasonSoft.Web.ViewState
     /// </summary>
     public class ViewStateSessionStorage : IViewstateStorage
     {
-        private System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<object, string>> StorageList
+        private List<KeyValuePair<object, string>> StorageList
         {
             get
             {
-                if (System.Web.HttpContext.Current.Session["ViewStateSessionStorage"] == null)
+                if (HttpContext.Current.Session["ViewStateSessionStorage"] == null)
                 {
-                    System.Web.HttpContext.Current.Session["ViewStateSessionStorage"] =
-                        new System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<object, string>>();
+                    HttpContext.Current.Session["ViewStateSessionStorage"] =
+                        new List<KeyValuePair<object, string>>();
                 }
                 return
-                    ((System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<object, string>>)
-                     System.Web.HttpContext.Current.Session["ViewStateSessionStorage"]);
+                    ((List<KeyValuePair<object, string>>)
+                     HttpContext.Current.Session["ViewStateSessionStorage"]);
             }
         }
 
@@ -46,8 +47,8 @@ namespace JasonSoft.Web.ViewState
 
         public KeyValuePair<object, string> Get(object key)
         {
-            System.Collections.Generic.KeyValuePair<object, string> retItem = new KeyValuePair<object, string>();
-            foreach (System.Collections.Generic.KeyValuePair<object, string> item in this.StorageList)
+            KeyValuePair<object, string> retItem = new KeyValuePair<object, string>();
+            foreach (KeyValuePair<object, string> item in this.StorageList)
             {
                 if (item.Key.ToString().ToLower().Equals(key.ToString().ToLower()))
                 {
@@ -63,9 +64,9 @@ namespace JasonSoft.Web.ViewState
 
         public void Remove(object key)
         {
-            System.Collections.Generic.KeyValuePair<object, string> itemToRemove =
-                new System.Collections.Generic.KeyValuePair<object, string>();
-            foreach (System.Collections.Generic.KeyValuePair<object, string> item in this.StorageList)
+            KeyValuePair<object, string> itemToRemove =
+                new KeyValuePair<object, string>();
+            foreach (KeyValuePair<object, string> item in this.StorageList)
             {
                 if (item.Key == key)
                 {

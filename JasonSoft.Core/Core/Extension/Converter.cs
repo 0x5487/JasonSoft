@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 
 namespace JasonSoft
 {
@@ -126,7 +123,7 @@ namespace JasonSoft
             }
 
             //Jason: support Guid type
-            if (conversionType == typeof(System.Guid))
+            if (conversionType == typeof(Guid))
             {
                 return new Guid(source.ToString());
             }

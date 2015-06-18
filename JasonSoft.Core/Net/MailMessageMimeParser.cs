@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net.Mail;
-using System.IO;
-using System.Text.RegularExpressions;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
+using System.Net.Mail;
 using System.Net.Mime;
+using System.Text;
+using System.Text.RegularExpressions;
 using JasonSoft.IO;
-using JasonSoft;
 
 namespace JasonSoft.Net
 {
@@ -54,7 +52,7 @@ namespace JasonSoft.Net
             string contentTransferEncoding = string.Empty;
             if (!string.IsNullOrEmpty(returnValue.Headers[ "content-transfer-encoding"]))
                 contentTransferEncoding = returnValue.Headers[ "content-transfer-encoding"];
-            System.Net.Mime.ContentType tmpContentType = FindContentType(returnValue.Headers);
+            ContentType tmpContentType = FindContentType(returnValue.Headers);
             string contentId = string.Empty;
  
 
@@ -220,16 +218,16 @@ namespace JasonSoft.Net
             switch (contentType.CharSet.ToLower())
             {
                 case "utf-8":
-                    returnValue = System.Text.UTF8Encoding.UTF8.GetString(buffer);
+                    returnValue = UTF8Encoding.UTF8.GetString(buffer);
                     break;
                 case "utf-7":
-                    returnValue = System.Text.UTF7Encoding.UTF7.GetString(buffer);
+                    returnValue = UTF7Encoding.UTF7.GetString(buffer);
                     break;
             }
             return returnValue;
         }
 
-        private static AlternateView ImportText(StringReader r, string encoding, System.Net.Mime.ContentType contentType)
+        private static AlternateView ImportText(StringReader r, string encoding, ContentType contentType)
         {
             string line = string.Empty;
             StringBuilder b = new StringBuilder();
@@ -276,7 +274,7 @@ namespace JasonSoft.Net
                     returnValue.TransferEncoding = TransferEncoding.Base64;
                     break;
                 default :
-                    returnValue = new Attachment(new MemoryStream(System.Text.Encoding.ASCII.GetBytes(line)), contentType);
+                    returnValue = new Attachment(new MemoryStream(Encoding.ASCII.GetBytes(line)), contentType);
                     returnValue.TransferEncoding = TransferEncoding.SevenBit;
                     break;
             }
@@ -328,9 +326,9 @@ namespace JasonSoft.Net
             return string.Empty;
         }
 
-        private static System.Net.Mime.ContentType FindContentType(NameValueCollection headers)
+        private static ContentType FindContentType(NameValueCollection headers)
         {
-            System.Net.Mime.ContentType returnValue = new System.Net.Mime.ContentType(Regex.Match(headers["content-type"], @"^([^;]*)", RegexOptions.IgnoreCase).Groups[1].Value);
+            ContentType returnValue = new ContentType(Regex.Match(headers["content-type"], @"^([^;]*)", RegexOptions.IgnoreCase).Groups[1].Value);
             if(Regex.IsMatch(headers["content-type"],  @"name=""?(.*?)""?($|;)", RegexOptions.IgnoreCase))
                 returnValue.Name = Regex.Match(headers["content-type"],  @"name=""?(.*?)""?($|;)", RegexOptions.IgnoreCase).Groups[1].Value;
             if (Regex.IsMatch(headers["content-type"], @"boundary=([^;\s]+)", RegexOptions.IgnoreCase))
@@ -362,7 +360,7 @@ namespace JasonSoft.Net
         }
         private static string MyMatchEvaluatorBase64(Match m)
         {
-            System.Text.Encoding enc = System.Text.Encoding.UTF7;
+            Encoding enc = Encoding.UTF7;
             return enc.GetString(Convert.FromBase64String(m.Groups[1].Value));
         }
         private static string DecodeBase64(string line, string enc)
@@ -371,10 +369,10 @@ namespace JasonSoft.Net
             switch (enc.ToLower())
             {
                 case "utf-7":
-                    returnValue = System.Text.Encoding.UTF7.GetString(Convert.FromBase64String(line));
+                    returnValue = Encoding.UTF7.GetString(Convert.FromBase64String(line));
                     break;
                 case "utf-8":
-                    returnValue = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(line));
+                    returnValue = Encoding.UTF8.GetString(Convert.FromBase64String(line));
                     break;
                 default:
                     break;

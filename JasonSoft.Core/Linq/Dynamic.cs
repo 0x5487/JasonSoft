@@ -2,11 +2,12 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Text;
 using System.Threading;
 
 namespace JasonSoft.Linq.Dynamic
@@ -613,7 +614,7 @@ namespace JasonSoft.Linq.Dynamic
                     externals = (IDictionary<string, object>)value;
                 }
                 else {
-                    AddSymbol("@" + i.ToString(System.Globalization.CultureInfo.InvariantCulture), value);
+                    AddSymbol("@" + i.ToString(CultureInfo.InvariantCulture), value);
                 }
             }
         }
@@ -1961,7 +1962,7 @@ namespace JasonSoft.Linq.Dynamic
         }
 
         Exception ParseError(int pos, string format, params object[] args) {
-            return new ParseException(string.Format(System.Globalization.CultureInfo.CurrentCulture, format, args), pos);
+            return new ParseException(string.Format(CultureInfo.CurrentCulture, format, args), pos);
         }
 
         static Dictionary<string, object> CreateKeywords() {

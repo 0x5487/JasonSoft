@@ -17,17 +17,15 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
-using System.IO.Compression;
 using System.Web.UI;
 using JasonSoft.IO.Compression;
-
 
 namespace JasonSoft.Web.ViewState
 {
     //Reference: 
     //http://www.codeproject.com/KB/viewstate/ServerViewState.aspx
     //http://www.codeproject.com/KB/viewstate/ViewStateCompression.aspx
-    public class NoViewStateBasePage : System.Web.UI.Page
+    public class NoViewStateBasePage : Page
     {
         private IViewstateStorage _viewstateStorage;
         private ViewStateConfiguration _config;

@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.DirectoryServices;
+using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace JasonSoft.Microsoft.IIS
 {
@@ -414,7 +413,7 @@ namespace JasonSoft.Microsoft.IIS
 
         }
 
-        public void DeleteApplication([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(false)]  // ERROR: Optional parameters aren't supported in C#
+        public void DeleteApplication([Optional, DefaultParameterValue(false)]  // ERROR: Optional parameters aren't supported in C#
 bool Recursive)
         {
 

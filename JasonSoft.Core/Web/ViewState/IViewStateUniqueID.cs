@@ -14,6 +14,7 @@
 
 
 using System;
+using System.Web;
 
 namespace JasonSoft.Web.ViewState
 {
@@ -35,7 +36,7 @@ namespace JasonSoft.Web.ViewState
 
         public string GetUniqueID()
         {
-            return System.Web.HttpContext.Current.Session.SessionID;
+            return HttpContext.Current.Session.SessionID;
         }
 
         #endregion
@@ -50,7 +51,7 @@ namespace JasonSoft.Web.ViewState
 
         public string GetUniqueID()
         {
-            return System.Guid.NewGuid().ToString();
+            return Guid.NewGuid().ToString();
         }
 
         #endregion
@@ -66,8 +67,8 @@ namespace JasonSoft.Web.ViewState
         public string GetUniqueID()
         {
             return
-                System.Web.HttpContext.Current.Request.UserHostAddress.ToString() + "@" +
-                System.Web.HttpContext.Current.Request.RawUrl + "@" + DateTime.Now;
+                HttpContext.Current.Request.UserHostAddress.ToString() + "@" +
+                HttpContext.Current.Request.RawUrl + "@" + DateTime.Now;
         }
 
         #endregion

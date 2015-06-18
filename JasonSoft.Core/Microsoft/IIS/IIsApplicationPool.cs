@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.DirectoryServices;
+using System.Runtime.InteropServices;
 
 namespace JasonSoft.Microsoft.IIS
 {
@@ -124,7 +122,7 @@ namespace JasonSoft.Microsoft.IIS
 
         #region "Public Functions and Methods"
 
-        public void StartPool([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(true)]  // ERROR: Optional parameters aren't supported in C#
+        public void StartPool([Optional, DefaultParameterValue(true)]  // ERROR: Optional parameters aren't supported in C#
 bool WaitTillDone)
         {
 
@@ -145,7 +143,7 @@ bool WaitTillDone)
 
         }
 
-        public void StopPool([System.Runtime.InteropServices.OptionalAttribute, System.Runtime.InteropServices.DefaultParameterValueAttribute(true)]  // ERROR: Optional parameters aren't supported in C#
+        public void StopPool([Optional, DefaultParameterValue(true)]  // ERROR: Optional parameters aren't supported in C#
 bool WaitTillDone)
         {
 
